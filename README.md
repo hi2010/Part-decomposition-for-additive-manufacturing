@@ -123,10 +123,10 @@ Adjust the values in DecompositionService at the beginning or any of the formula
 
 
 # used libraries:
-* [vtk] (https://vtk.org/)
-* [lib3mf] (https://github.com/3MFConsortium/lib3mf)
-* [openGa] (https://github.com/Arash-codedev/openGA)
-* [v-hacd] (https://github.com/kmammou/v-hacd) slightly modified version from performance improvements branch
+* [vtk](https://vtk.org/)
+* [lib3mf](https://github.com/3MFConsortium/lib3mf)
+* [openGa](https://github.com/Arash-codedev/openGA)
+* [v-hacd](https://github.com/kmammou/v-hacd) slightly modified version from performance improvements branch
 
 # build system:
 [cmake] (https://cmake.org/download/)
