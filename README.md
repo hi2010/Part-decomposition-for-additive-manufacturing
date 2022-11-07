@@ -10,6 +10,8 @@ Uses the decomposition process from:
 [Part decomposition and evaluation based on standard design guidelines for additive manufacturability and assemblability] (https://doi.org/10.1016/j.addma.2020.101702)
 slightly modified.
 
+ONLY WORKS WITH LINUX (due to the included parts of lib3mf and the cmake file).
+
 # build
 Open in VisualStudioCode with cmake extension or use cmake --build .. and cmake --install .. from the build folder.
 Use start script from /bin Folder to use from commandline (or fix the rpath using the cmake file in ./ folder).
@@ -121,10 +123,10 @@ Adjust the values in DecompositionService at the beginning or any of the formula
 
 
 # used libraries:
-[vtk] (https://vtk.org/)
-[lib3mf] (https://github.com/3MFConsortium/lib3mf)
-[openGa] (https://github.com/Arash-codedev/openGA)
-[v-hacd] (https://github.com/kmammou/v-hacd) slightly modified version from performance improvements branch
+* [vtk] (https://vtk.org/)
+* [lib3mf] (https://github.com/3MFConsortium/lib3mf)
+* [openGa] (https://github.com/Arash-codedev/openGA)
+* [v-hacd] (https://github.com/kmammou/v-hacd) slightly modified version from performance improvements branch
 
 # build system:
 [cmake] (https://cmake.org/download/)
