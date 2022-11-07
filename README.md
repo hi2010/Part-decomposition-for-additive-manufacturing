@@ -128,5 +128,8 @@ Adjust the values in DecompositionService at the beginning or any of the formula
 * [openGa](https://github.com/Arash-codedev/openGA)
 * [v-hacd](https://github.com/kmammou/v-hacd) slightly modified version from performance improvements branch
 
+For licenses see licenses.txt.
+Starting the program with --licenses as parameter should also show the licenses.
+
 # build system:
 [cmake](https://cmake.org/download/)
