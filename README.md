@@ -129,4 +129,4 @@ Adjust the values in DecompositionService at the beginning or any of the formula
 * [v-hacd](https://github.com/kmammou/v-hacd) slightly modified version from performance improvements branch
 
 # build system:
-[cmake] (https://cmake.org/download/)
+[cmake](https://cmake.org/download/)
