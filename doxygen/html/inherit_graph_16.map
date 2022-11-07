@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$structsCostWeights.html" title="the weigths for the optimization" alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$structsPartCosts.html" title="the costs of a decomposition" alt="" coords="164,5,255,32"/>
+<area shape="rect" id="node3" href="$structMyMiddleCost.html" title="the middle cost of a solution" alt="" coords="303,5,417,32"/>
+</map>

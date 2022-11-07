@@ -1,0 +1,169 @@
+\hypertarget{classMyClass}{}\doxysection{My\+Class Class Reference}
+\label{classMyClass}\index{MyClass@{MyClass}}
+
+
+Collaboration diagram for My\+Class\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMyClass__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMyClass_a077b357a8b0069f93f06b7d4602f6f48}\label{classMyClass_a077b357a8b0069f93f06b7d4602f6f48}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} $>$\+::size\+\_\+type {\bfseries type\+Vec\+Size}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMyClass_acd6a58e2becca9949e560adcc506e9ad}{My\+Class}} (const \mbox{\hyperlink{structsCostWeights}{s\+Cost\+Weights}} \&cost\+Weights, \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} meshwa)
+\begin{DoxyCompactList}\small\item\em Construct a new My Class object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMyClass_a7354dda33f634d6f22972c5d9610ded8}{My\+Class}} (const \mbox{\hyperlink{classMyClass}{My\+Class}} \&mc)
+\begin{DoxyCompactList}\small\item\em Construct a new My Class object / copy constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMyClass_a2eb9c31787d101a0a67e42902113d5dc}{init\+\_\+genes}} (\mbox{\hyperlink{structMySolution}{My\+Solution}} \&p, const std\+::function$<$ double(void)$>$ \&rnd01)
+\begin{DoxyCompactList}\small\item\em initialize the first generation of species \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMyClass_ab7ffaafc232301d72005e7935607c09c}{eval\+\_\+solution}} (const \mbox{\hyperlink{structMySolution}{My\+Solution}} \&p, \mbox{\hyperlink{structMyMiddleCost}{My\+Middle\+Cost}} \&c)
+\begin{DoxyCompactList}\small\item\em decompose the object and evaluate the result \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMyClass_a884fdf567b3308311b1ae69ecc3bdfcb}\label{classMyClass_a884fdf567b3308311b1ae69ecc3bdfcb}} 
+\mbox{\hyperlink{structMySolution}{My\+Solution}} {\bfseries mutate} (const \mbox{\hyperlink{structMySolution}{My\+Solution}} \&X\+\_\+base, const std\+::function$<$ double(void)$>$ \&rnd01, double shrink\+\_\+scale)
+\item 
+\mbox{\Hypertarget{classMyClass_a518df56a71491cedc692f3a1fe141aad}\label{classMyClass_a518df56a71491cedc692f3a1fe141aad}} 
+\mbox{\hyperlink{structMySolution}{My\+Solution}} {\bfseries crossover} (const \mbox{\hyperlink{structMySolution}{My\+Solution}} \&X1, const \mbox{\hyperlink{structMySolution}{My\+Solution}} \&X2, const std\+::function$<$ double(void)$>$ \&rnd01)
+\item 
+\mbox{\Hypertarget{classMyClass_ac3a9599cbba625a7ee5ddfab3881cb24}\label{classMyClass_ac3a9599cbba625a7ee5ddfab3881cb24}} 
+void {\bfseries S\+O\+\_\+report\+\_\+generation} (int generation\+\_\+number, const E\+A\+::\+Generation\+Type$<$ \mbox{\hyperlink{structMySolution}{My\+Solution}}, \mbox{\hyperlink{structMyMiddleCost}{My\+Middle\+Cost}} $>$ \&last\+\_\+generation, const \mbox{\hyperlink{structMySolution}{My\+Solution}} \&best\+\_\+genes)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMyClass_a3671bd211ffbd7d022c4a8458c9bf2c3}\label{classMyClass_a3671bd211ffbd7d022c4a8458c9bf2c3}} 
+\mbox{\hyperlink{structsCostWeights}{s\+Cost\+Weights}} {\bfseries \+\_\+cost\+Weights}
+\item 
+\mbox{\Hypertarget{classMyClass_a9e30a3ed91e139e4e46c3407b3d45b9c}\label{classMyClass_a9e30a3ed91e139e4e46c3407b3d45b9c}} 
+\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} $\ast$ {\bfseries \+\_\+meshwa}
+\item 
+\mbox{\Hypertarget{classMyClass_adf8877629afc50214f9468a63c4dacd3}\label{classMyClass_adf8877629afc50214f9468a63c4dacd3}} 
+double {\bfseries upper\+Lim} = 1
+\item 
+\mbox{\Hypertarget{classMyClass_abf8432e801e32048be7abb3ffe4df060}\label{classMyClass_abf8432e801e32048be7abb3ffe4df060}} 
+\mbox{\hyperlink{structMySolution}{My\+Solution}} {\bfseries best\+Genes}
+\item 
+\mbox{\Hypertarget{classMyClass_aec01dde91091d0864bc4dc2775cf1450}\label{classMyClass_aec01dde91091d0864bc4dc2775cf1450}} 
+\mbox{\hyperlink{structMyMiddleCost}{My\+Middle\+Cost}} {\bfseries best\+Cost}
+\item 
+\mbox{\Hypertarget{classMyClass_a46aac69f29aaefbdc446ad2c14c9b32b}\label{classMyClass_a46aac69f29aaefbdc446ad2c14c9b32b}} 
+double {\bfseries min\+Ch\+Vol} = -\/1
+\item 
+\mbox{\Hypertarget{classMyClass_a38201af281f1c63caac856eebce2bb7c}\label{classMyClass_a38201af281f1c63caac856eebce2bb7c}} 
+double {\bfseries max\+Chs} = -\/1
+\item 
+\mbox{\Hypertarget{classMyClass_a78218fee2f17952955215cb2b8e0f9f4}\label{classMyClass_a78218fee2f17952955215cb2b8e0f9f4}} 
+uint {\bfseries cur\+Popul} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 181 of file workflows.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMyClass_acd6a58e2becca9949e560adcc506e9ad}\label{classMyClass_acd6a58e2becca9949e560adcc506e9ad}} 
+\index{MyClass@{MyClass}!MyClass@{MyClass}}
+\index{MyClass@{MyClass}!MyClass@{MyClass}}
+\doxysubsubsection{\texorpdfstring{MyClass()}{MyClass()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily My\+Class\+::\+My\+Class (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsCostWeights}{s\+Cost\+Weights}} \&}]{cost\+Weights,  }\item[{\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}}}]{meshwa }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new My Class object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cost\+Weights} & the costs to use for the optimization \\
+\hline
+{\em meshwa} & the mesh to use for the optimization \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 206 of file workflows.\+cpp.
+
+\mbox{\Hypertarget{classMyClass_a7354dda33f634d6f22972c5d9610ded8}\label{classMyClass_a7354dda33f634d6f22972c5d9610ded8}} 
+\index{MyClass@{MyClass}!MyClass@{MyClass}}
+\index{MyClass@{MyClass}!MyClass@{MyClass}}
+\doxysubsubsection{\texorpdfstring{MyClass()}{MyClass()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily My\+Class\+::\+My\+Class (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMyClass}{My\+Class}} \&}]{mc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new My Class object / copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mc} & the object to copy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 217 of file workflows.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMyClass_ab7ffaafc232301d72005e7935607c09c}\label{classMyClass_ab7ffaafc232301d72005e7935607c09c}} 
+\index{MyClass@{MyClass}!eval\_solution@{eval\_solution}}
+\index{eval\_solution@{eval\_solution}!MyClass@{MyClass}}
+\doxysubsubsection{\texorpdfstring{eval\_solution()}{eval\_solution()}}
+{\footnotesize\ttfamily bool My\+Class\+::eval\+\_\+solution (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMySolution}{My\+Solution}} \&}]{p,  }\item[{\mbox{\hyperlink{structMyMiddleCost}{My\+Middle\+Cost}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+decompose the object and evaluate the result 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & the v-\/hacd parameters to use \\
+\hline
+{\em c} & the resulting middle cost \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true always 
+
+false never 
+\end{DoxyReturn}
+
+
+Definition at line 251 of file workflows.\+cpp.
+
+\mbox{\Hypertarget{classMyClass_a2eb9c31787d101a0a67e42902113d5dc}\label{classMyClass_a2eb9c31787d101a0a67e42902113d5dc}} 
+\index{MyClass@{MyClass}!init\_genes@{init\_genes}}
+\index{init\_genes@{init\_genes}!MyClass@{MyClass}}
+\doxysubsubsection{\texorpdfstring{init\_genes()}{init\_genes()}}
+{\footnotesize\ttfamily void My\+Class\+::init\+\_\+genes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMySolution}{My\+Solution}} \&}]{p,  }\item[{const std\+::function$<$ double(void)$>$ \&}]{rnd01 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+initialize the first generation of species 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & the class with the resulting v-\/hacd parameters \\
+\hline
+{\em rnd01} & the random value generator \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 232 of file workflows.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/workflows.\+cpp\end{DoxyCompactItemize}

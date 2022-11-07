@@ -1,0 +1,48 @@
+\hypertarget{polyEdgeSet_8hpp}{}\doxysection{inc/poly\+Edge\+Set.hpp File Reference}
+\label{polyEdgeSet_8hpp}\index{inc/polyEdgeSet.hpp@{inc/polyEdgeSet.hpp}}
+
+
+a set to iterate ovet a unique set of edges of a poly data. Currently not used. How to use\+: create a Unoredered\+Edge\+Set. insert edges using ?insert?(isert\+Edge\+Sorted(ip0, ip1)). This way it is ensured, that the edge p1 -\/$>$ p0 does not get inserted if p0 -\/$>$ p1 already exists  
+
+
+{\ttfamily \#include $<$vtk\+Type.\+h$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+Include dependency graph for poly\+Edge\+Set.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{polyEdgeSet_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPolyEdge}{Poly\+Edge}}
+\item 
+struct \mbox{\hyperlink{structEdgeHashByHalfsizeValue}{Edge\+Hash\+By\+Halfsize\+Value}}
+\item 
+struct \mbox{\hyperlink{structEdgeEqualByIdxs}{Edge\+Equal\+By\+Idxs}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{polyEdgeSet_8hpp_ac8f4c0f906e78492bf4315b26476d7de}\label{polyEdgeSet_8hpp_ac8f4c0f906e78492bf4315b26476d7de}} 
+typedef std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classPolyEdge}{Poly\+Edge}}, \mbox{\hyperlink{structEdgeHashByHalfsizeValue}{Edge\+Hash\+By\+Halfsize\+Value}}, \mbox{\hyperlink{structEdgeEqualByIdxs}{Edge\+Equal\+By\+Idxs}} $>$ {\bfseries Unordered\+Edge\+Set}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a set to iterate ovet a unique set of edges of a poly data. Currently not used. How to use\+: create a Unoredered\+Edge\+Set. insert edges using ?insert?(isert\+Edge\+Sorted(ip0, ip1)). This way it is ensured, that the edge p1 -\/$>$ p0 does not get inserted if p0 -\/$>$ p1 already exists 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}

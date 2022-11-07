@@ -1,0 +1,175 @@
+\hypertarget{lArgParsHelper_8hpp}{}\doxysection{inc/l\+Arg\+Pars\+Helper.hpp File Reference}
+\label{lArgParsHelper_8hpp}\index{inc/lArgParsHelper.hpp@{inc/lArgParsHelper.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include \char`\"{}V\+H\+A\+C\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}workflows.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}l\+File\+Helper.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mesh\+With\+Attributes.\+hpp\char`\"{}}\newline
+Include dependency graph for l\+Arg\+Pars\+Helper.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lArgParsHelper_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{lArgParsHelper_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classInputParser}{Input\+Parser}}
+\begin{DoxyCompactList}\small\item\em cli parser -\/$>$ input to tokens / vars \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{lArgParsHelper_8hpp_af258793488195281bfac44007dca1d3d}\label{lArgParsHelper_8hpp_af258793488195281bfac44007dca1d3d}} 
+void \mbox{\hyperlink{lArgParsHelper_8hpp_af258793488195281bfac44007dca1d3d}{pars\+Print\+Help}} ()
+\begin{DoxyCompactList}\small\item\em show available cli options T\+O\+DO\+: add license printout \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lArgParsHelper_8hpp_ad5a69597c6402a4fc6104d8404a41e2e}\label{lArgParsHelper_8hpp_ad5a69597c6402a4fc6104d8404a41e2e}} 
+void {\bfseries pars\+Print\+Licenses} ()
+\item 
+V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters \mbox{\hyperlink{lArgParsHelper_8hpp_ab7fb419eefbbea7cf788def481a3ddd4}{parse\+Vhacd\+Params}} (const \mbox{\hyperlink{classInputParser}{Input\+Parser}} \&inp\+Pars)
+\begin{DoxyCompactList}\small\item\em does nothing because vhacd params are not parsed \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsCostWeights}{s\+Cost\+Weights}} \mbox{\hyperlink{lArgParsHelper_8hpp_a46a0d076380a8306c8465ae28f07750d}{parse\+Cost\+Weights}} (\mbox{\hyperlink{classInputParser}{Input\+Parser}} inp\+Pars)
+\begin{DoxyCompactList}\small\item\em parses the optimization weights \end{DoxyCompactList}\item 
+G\+A\+\_\+\+Type \mbox{\hyperlink{lArgParsHelper_8hpp_a9a52803e5847989f8e0fff0c33e01895}{parse\+G\+A\+Settings}} (\mbox{\hyperlink{classInputParser}{Input\+Parser}} inp\+Pars)
+\begin{DoxyCompactList}\small\item\em parse the optimization settings that can be set \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lArgParsHelper_8hpp_a643ff43f03969689b04cc0f8a83015d9}{parse\+Print\+Dimensions}} (\mbox{\hyperlink{classInputParser}{Input\+Parser}} inp\+Pars, \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes}} \&meshwa)
+\begin{DoxyCompactList}\small\item\em parse the dimensions of the printer build volume \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lArgParsHelper_8hpp_a95b709df49efb853814bb383a1820b5c}{run\+Pars\+Mode}} (const \mbox{\hyperlink{classInputParser}{Input\+Parser}} \&inp\+Pars, int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em run the program with parser / run the cli \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+iain, 0x90 \href{https://stackoverflow.com/questions/865668/parsing-command-line-arguments-in-c}{\texttt{ https\+://stackoverflow.\+com/questions/865668/parsing-\/command-\/line-\/arguments-\/in-\/c}} (input parser), rest is new, also input parser is modified 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/04-\/24 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lArgParsHelper_8hpp_a46a0d076380a8306c8465ae28f07750d}\label{lArgParsHelper_8hpp_a46a0d076380a8306c8465ae28f07750d}} 
+\index{lArgParsHelper.hpp@{lArgParsHelper.hpp}!parseCostWeights@{parseCostWeights}}
+\index{parseCostWeights@{parseCostWeights}!lArgParsHelper.hpp@{lArgParsHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{parseCostWeights()}{parseCostWeights()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsCostWeights}{s\+Cost\+Weights}} parse\+Cost\+Weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInputParser}{Input\+Parser}}}]{inp\+Pars }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+parses the optimization weights 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp\+Pars} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structsCostWeights}{s\+Cost\+Weights}} 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file l\+Arg\+Pars\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lArgParsHelper_8hpp_a9a52803e5847989f8e0fff0c33e01895}\label{lArgParsHelper_8hpp_a9a52803e5847989f8e0fff0c33e01895}} 
+\index{lArgParsHelper.hpp@{lArgParsHelper.hpp}!parseGASettings@{parseGASettings}}
+\index{parseGASettings@{parseGASettings}!lArgParsHelper.hpp@{lArgParsHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{parseGASettings()}{parseGASettings()}}
+{\footnotesize\ttfamily G\+A\+\_\+\+Type parse\+G\+A\+Settings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInputParser}{Input\+Parser}}}]{inp\+Pars }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+parse the optimization settings that can be set 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp\+Pars} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+A\+\_\+\+Type 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file l\+Arg\+Pars\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lArgParsHelper_8hpp_a643ff43f03969689b04cc0f8a83015d9}\label{lArgParsHelper_8hpp_a643ff43f03969689b04cc0f8a83015d9}} 
+\index{lArgParsHelper.hpp@{lArgParsHelper.hpp}!parsePrintDimensions@{parsePrintDimensions}}
+\index{parsePrintDimensions@{parsePrintDimensions}!lArgParsHelper.hpp@{lArgParsHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{parsePrintDimensions()}{parsePrintDimensions()}}
+{\footnotesize\ttfamily void parse\+Print\+Dimensions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInputParser}{Input\+Parser}}}]{inp\+Pars,  }\item[{\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes}} \&}]{meshwa }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+parse the dimensions of the printer build volume 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp\+Pars} & \\
+\hline
+{\em meshwa} & build volume gets set on this object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 157 of file l\+Arg\+Pars\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lArgParsHelper_8hpp_ab7fb419eefbbea7cf788def481a3ddd4}\label{lArgParsHelper_8hpp_ab7fb419eefbbea7cf788def481a3ddd4}} 
+\index{lArgParsHelper.hpp@{lArgParsHelper.hpp}!parseVhacdParams@{parseVhacdParams}}
+\index{parseVhacdParams@{parseVhacdParams}!lArgParsHelper.hpp@{lArgParsHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{parseVhacdParams()}{parseVhacdParams()}}
+{\footnotesize\ttfamily V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters parse\+Vhacd\+Params (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputParser}{Input\+Parser}} \&}]{inp\+Pars }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+does nothing because vhacd params are not parsed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp\+Pars} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters 
+\end{DoxyReturn}
+
+
+Definition at line 109 of file l\+Arg\+Pars\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lArgParsHelper_8hpp_a95b709df49efb853814bb383a1820b5c}\label{lArgParsHelper_8hpp_a95b709df49efb853814bb383a1820b5c}} 
+\index{lArgParsHelper.hpp@{lArgParsHelper.hpp}!runParsMode@{runParsMode}}
+\index{runParsMode@{runParsMode}!lArgParsHelper.hpp@{lArgParsHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{runParsMode()}{runParsMode()}}
+{\footnotesize\ttfamily void run\+Pars\+Mode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInputParser}{Input\+Parser}} \&}]{inp\+Pars,  }\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+run the program with parser / run the cli 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp\+Pars} & \mbox{\hyperlink{classInputParser}{Input\+Parser}} object filled with the cli content (argc, argv) \\
+\hline
+{\em argc} & the programs argc (from cli) \\
+\hline
+{\em argv} & the programs argv (from cli) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 206 of file l\+Arg\+Pars\+Helper.\+hpp.
+

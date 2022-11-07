@@ -1,0 +1,25 @@
+old/
+external/vtk_old_build/
+external/vtk/*
+external/VHACD_Performance/VHACD_Lib/build/*
+*.cmake
+build/*
+bin.zip
+bin/*
+bin/lib/*
+!/build/lib3mf.so*
+!/build/decomposer
+
+# gitignore cmake
+# https://github.com/github/gitignore/blob/main/CMake.gitignore
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps

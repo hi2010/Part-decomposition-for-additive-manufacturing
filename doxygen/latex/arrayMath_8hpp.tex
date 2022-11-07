@@ -1,0 +1,312 @@
+\hypertarget{arrayMath_8hpp}{}\doxysection{inc/array\+Math.hpp File Reference}
+\label{arrayMath_8hpp}\index{inc/arrayMath.hpp@{inc/arrayMath.hpp}}
+
+
+mathematical functions for arrays (len 3)  
+
+
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for array\+Math.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{arrayMath_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arrayMath_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T(\& \mbox{\hyperlink{arrayMath_8hpp_a448b8758cb2fcbb82af6b1a4cc7985e3}{add3\+Ip}} (T(\&arrayA)\mbox{[}3\mbox{]}, const T(\&arrayB)\mbox{[}3\mbox{]}))\mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em add array b to array a inplace (array a) (vector addition) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{arrayMath_8hpp_a5cc2f6edb3af2184eb284dd3e2ceb90a}{add3}} (const T(\&arrayA)\mbox{[}3\mbox{]}, const T(\&arrayB)\mbox{[}3\mbox{]}, const T(\&result)\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em add array a and array b to result (vector addition) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T(\& \mbox{\hyperlink{arrayMath_8hpp_a4bc58b4e132f7221c5ebfb58dad1abeb}{sub3\+Ip}} (T(\&arrayA)\mbox{[}3\mbox{]}, const T(\&arrayB)\mbox{[}3\mbox{]}))\mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em subtract array b from array a inplace (array a) (vector subtraction) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{arrayMath_8hpp_a47e516cce9abacc759c8fb16879a2f5e}{sub3\+Ip}} (T $\ast$arrayA, const T $\ast$arrayB)
+\begin{DoxyCompactList}\small\item\em subtract array b from array a inplace (array a) (vector subtraction) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T(\& \mbox{\hyperlink{arrayMath_8hpp_a5f4a18ee121e1eabe42ff74951eb0ef0}{mul3\+Ip}} (T(\&arrayA)\mbox{[}3\mbox{]}, T value))\mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em multiply by scalar in place return = arrayA \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{arrayMath_8hpp_a2034659d0d51d4a7b5e6b09db78fd9cf}{mul3}} (T(\&arrayA)\mbox{[}3\mbox{]}, T value, T(\&result)\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em multiply by scalar to result array \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{arrayMath_8hpp_a226110f7f0ea37794bf0f5c9edb734c4}{e\+Norm3}} (const T $\ast$arrayA)
+\begin{DoxyCompactList}\small\item\em euclidean norm / magnitude -\/$>$ sqrt(sum(xi²)) return\+: $>$= 0 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T(\& \mbox{\hyperlink{arrayMath_8hpp_a656a5de6347be291e17b7360e5627e7d}{bounds2\+Diff\+Ip}} (T(\&arr)\mbox{[}6\mbox{]}))\mbox{[}6\mbox{]}
+\begin{DoxyCompactList}\small\item\em calculate the difference for an array of bounds and assign it to the first 3 elements of the input array use with caution \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{arrayMath_8hpp_a38c12eb54e9e796fec4be396f1f57914}{bounds2\+Diag\+Len}} (T $\ast$arr)
+\begin{DoxyCompactList}\small\item\em assumes array length of 6 uses euclidean norm (e\+Norm3) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{arrayMath_8hpp_a3971023ecf201294f803f50562e41d77}\label{arrayMath_8hpp_a3971023ecf201294f803f50562e41d77}} 
+{\footnotesize template$<$typename T , size\+\_\+t size$>$ }\\std\+::string {\bfseries array2\+Str} (T $\ast$arr)
+\item 
+\mbox{\Hypertarget{arrayMath_8hpp_ae8cc696ecbed7a7fb2c4dd91084880b1}\label{arrayMath_8hpp_ae8cc696ecbed7a7fb2c4dd91084880b1}} 
+std\+::string {\bfseries array2\+Str3d} (double $\ast$arr)
+\item 
+\mbox{\Hypertarget{arrayMath_8hpp_a0641bf387bf486de2298cdf08f5ed25f}\label{arrayMath_8hpp_a0641bf387bf486de2298cdf08f5ed25f}} 
+std\+::string {\bfseries array2\+Str6d} (double $\ast$arr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+mathematical functions for arrays (len 3) 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/19
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Don\textquotesingle{}t care Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{arrayMath_8hpp_a5cc2f6edb3af2184eb284dd3e2ceb90a}\label{arrayMath_8hpp_a5cc2f6edb3af2184eb284dd3e2ceb90a}} 
+\index{arrayMath.hpp@{arrayMath.hpp}!add3@{add3}}
+\index{add3@{add3}!arrayMath.hpp@{arrayMath.hpp}}
+\doxysubsubsection{\texorpdfstring{add3()}{add3()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void add3 (\begin{DoxyParamCaption}\item[{const T(\&)}]{arrayA\mbox{[}3\mbox{]},  }\item[{const T(\&)}]{arrayB\mbox{[}3\mbox{]},  }\item[{const T(\&)}]{result\mbox{[}3\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+add array a and array b to result (vector addition) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em arrayA} & \\
+\hline
+{\em arrayB} & \\
+\hline
+{\em result} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file array\+Math.\+hpp.
+
+\mbox{\Hypertarget{arrayMath_8hpp_a448b8758cb2fcbb82af6b1a4cc7985e3}\label{arrayMath_8hpp_a448b8758cb2fcbb82af6b1a4cc7985e3}} 
+\index{arrayMath.hpp@{arrayMath.hpp}!add3Ip@{add3Ip}}
+\index{add3Ip@{add3Ip}!arrayMath.hpp@{arrayMath.hpp}}
+\doxysubsubsection{\texorpdfstring{add3Ip()}{add3Ip()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T(\& add3\+Ip (\begin{DoxyParamCaption}\item[{T(\&)}]{arrayA\mbox{[}3\mbox{]},  }\item[{const T(\&)}]{arrayB\mbox{[}3\mbox{]} }\end{DoxyParamCaption}))\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+add array b to array a inplace (array a) (vector addition) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T(\&)\mbox{[}3\mbox{]} array of T of size 3 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file array\+Math.\+hpp.
+
+\mbox{\Hypertarget{arrayMath_8hpp_a38c12eb54e9e796fec4be396f1f57914}\label{arrayMath_8hpp_a38c12eb54e9e796fec4be396f1f57914}} 
+\index{arrayMath.hpp@{arrayMath.hpp}!bounds2DiagLen@{bounds2DiagLen}}
+\index{bounds2DiagLen@{bounds2DiagLen}!arrayMath.hpp@{arrayMath.hpp}}
+\doxysubsubsection{\texorpdfstring{bounds2DiagLen()}{bounds2DiagLen()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T bounds2\+Diag\+Len (\begin{DoxyParamCaption}\item[{T $\ast$}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+assumes array length of 6 uses euclidean norm (e\+Norm3) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+
+
+Definition at line 198 of file array\+Math.\+hpp.
+
+\mbox{\Hypertarget{arrayMath_8hpp_a656a5de6347be291e17b7360e5627e7d}\label{arrayMath_8hpp_a656a5de6347be291e17b7360e5627e7d}} 
+\index{arrayMath.hpp@{arrayMath.hpp}!bounds2DiffIp@{bounds2DiffIp}}
+\index{bounds2DiffIp@{bounds2DiffIp}!arrayMath.hpp@{arrayMath.hpp}}
+\doxysubsubsection{\texorpdfstring{bounds2DiffIp()}{bounds2DiffIp()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T(\& bounds2\+Diff\+Ip (\begin{DoxyParamCaption}\item[{T(\&)}]{arr\mbox{[}6\mbox{]} }\end{DoxyParamCaption}))\mbox{[}6\mbox{]}\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculate the difference for an array of bounds and assign it to the first 3 elements of the input array use with caution 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T(\&)\mbox{[}6\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file array\+Math.\+hpp.
+
+\mbox{\Hypertarget{arrayMath_8hpp_a226110f7f0ea37794bf0f5c9edb734c4}\label{arrayMath_8hpp_a226110f7f0ea37794bf0f5c9edb734c4}} 
+\index{arrayMath.hpp@{arrayMath.hpp}!eNorm3@{eNorm3}}
+\index{eNorm3@{eNorm3}!arrayMath.hpp@{arrayMath.hpp}}
+\doxysubsubsection{\texorpdfstring{eNorm3()}{eNorm3()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T e\+Norm3 (\begin{DoxyParamCaption}\item[{const T $\ast$}]{arrayA }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+euclidean norm / magnitude -\/$>$ sqrt(sum(xi²)) return\+: $>$= 0 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em arrayA} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+
+
+Definition at line 166 of file array\+Math.\+hpp.
+
+\mbox{\Hypertarget{arrayMath_8hpp_a2034659d0d51d4a7b5e6b09db78fd9cf}\label{arrayMath_8hpp_a2034659d0d51d4a7b5e6b09db78fd9cf}} 
+\index{arrayMath.hpp@{arrayMath.hpp}!mul3@{mul3}}
+\index{mul3@{mul3}!arrayMath.hpp@{arrayMath.hpp}}
+\doxysubsubsection{\texorpdfstring{mul3()}{mul3()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mul3 (\begin{DoxyParamCaption}\item[{T(\&)}]{arrayA\mbox{[}3\mbox{]},  }\item[{T}]{value,  }\item[{T(\&)}]{result\mbox{[}3\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+multiply by scalar to result array 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em arrayA} & \\
+\hline
+{\em value} & \\
+\hline
+{\em result} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 136 of file array\+Math.\+hpp.
+
+\mbox{\Hypertarget{arrayMath_8hpp_a5f4a18ee121e1eabe42ff74951eb0ef0}\label{arrayMath_8hpp_a5f4a18ee121e1eabe42ff74951eb0ef0}} 
+\index{arrayMath.hpp@{arrayMath.hpp}!mul3Ip@{mul3Ip}}
+\index{mul3Ip@{mul3Ip}!arrayMath.hpp@{arrayMath.hpp}}
+\doxysubsubsection{\texorpdfstring{mul3Ip()}{mul3Ip()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T(\& mul3\+Ip (\begin{DoxyParamCaption}\item[{T(\&)}]{arrayA\mbox{[}3\mbox{]},  }\item[{T}]{value }\end{DoxyParamCaption}))\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+multiply by scalar in place return = arrayA 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T(\&)\mbox{[}3\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file array\+Math.\+hpp.
+
+\mbox{\Hypertarget{arrayMath_8hpp_a47e516cce9abacc759c8fb16879a2f5e}\label{arrayMath_8hpp_a47e516cce9abacc759c8fb16879a2f5e}} 
+\index{arrayMath.hpp@{arrayMath.hpp}!sub3Ip@{sub3Ip}}
+\index{sub3Ip@{sub3Ip}!arrayMath.hpp@{arrayMath.hpp}}
+\doxysubsubsection{\texorpdfstring{sub3Ip()}{sub3Ip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ sub3\+Ip (\begin{DoxyParamCaption}\item[{T $\ast$}]{arrayA,  }\item[{const T $\ast$}]{arrayB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+subtract array b from array a inplace (array a) (vector subtraction) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em arrayA} & \\
+\hline
+{\em arrayB} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T$\ast$ 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file array\+Math.\+hpp.
+
+\mbox{\Hypertarget{arrayMath_8hpp_a4bc58b4e132f7221c5ebfb58dad1abeb}\label{arrayMath_8hpp_a4bc58b4e132f7221c5ebfb58dad1abeb}} 
+\index{arrayMath.hpp@{arrayMath.hpp}!sub3Ip@{sub3Ip}}
+\index{sub3Ip@{sub3Ip}!arrayMath.hpp@{arrayMath.hpp}}
+\doxysubsubsection{\texorpdfstring{sub3Ip()}{sub3Ip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T(\& sub3\+Ip (\begin{DoxyParamCaption}\item[{T(\&)}]{arrayA\mbox{[}3\mbox{]},  }\item[{const T(\&)}]{arrayB\mbox{[}3\mbox{]} }\end{DoxyParamCaption}))\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+subtract array b from array a inplace (array a) (vector subtraction) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T(\&)\mbox{[}3\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file array\+Math.\+hpp.
+

@@ -1,0 +1,14 @@
+<map id="inc/lVtkHelper.hpp" name="inc/lVtkHelper.hpp">
+<area shape="rect" id="node1" title="helper functions to convert triangle data form lib3mf to vtk polydata. Also lateron prbly &quot;pure&quot; vtk ..." alt="" coords="429,5,571,32"/>
+<area shape="rect" id="node2" href="$lVtkHelper_8cpp_source.html" title=" " alt="" coords="5,80,147,107"/>
+<area shape="rect" id="node3" href="$workflows_8cpp_source.html" title=" " alt="" coords="419,229,557,256"/>
+<area shape="rect" id="node4" href="$meshWithAttributes_8hpp.html" title="a header only class as data container with some additional functionality. May contain mesh and convex..." alt="" coords="399,80,601,107"/>
+<area shape="rect" id="node10" href="$lFileHelper_8hpp_source.html" title=" " alt="" coords="957,155,1099,181"/>
+<area shape="rect" id="node11" href="$lVhacdHelper_8hpp_source.html" title=" " alt="" coords="656,80,816,107"/>
+<area shape="rect" id="node5" href="$workflows_8hpp.html" title="the whole top level optimization workflows and data structures" alt="" coords="507,155,647,181"/>
+<area shape="rect" id="node6" href="$lArgParsHelper_8hpp.html" title=" " alt="" coords="600,229,771,256"/>
+<area shape="rect" id="node8" href="$polyQualityMeasures_8hpp_source.html" title=" " alt="" coords="221,155,432,181"/>
+<area shape="rect" id="node7" href="$main_8cpp_source.html" title=" " alt="" coords="633,304,738,331"/>
+<area shape="rect" id="node9" href="$polyQualityMeasures_8cpp_source.html" title=" " alt="" coords="184,229,395,256"/>
+<area shape="rect" id="node12" href="$lVhacdHelper_8cpp.html" title="copied from kmammou&#39;s v&#45;hacd" alt="" coords="774,155,933,181"/>
+</map>

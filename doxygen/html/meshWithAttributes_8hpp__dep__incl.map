@@ -1,0 +1,9 @@
+<map id="inc/meshWithAttributes.hpp" name="inc/meshWithAttributes.hpp">
+<area shape="rect" id="node1" title="a header only class as data container with some additional functionality. May contain mesh and convex..." alt="" coords="252,5,455,32"/>
+<area shape="rect" id="node2" href="$workflows_8cpp_source.html" title=" " alt="" coords="240,155,379,181"/>
+<area shape="rect" id="node3" href="$workflows_8hpp.html" title="the whole top level optimization workflows and data structures" alt="" coords="338,80,478,107"/>
+<area shape="rect" id="node4" href="$lArgParsHelper_8hpp.html" title=" " alt="" coords="421,155,592,181"/>
+<area shape="rect" id="node6" href="$polyQualityMeasures_8hpp_source.html" title=" " alt="" coords="52,80,263,107"/>
+<area shape="rect" id="node5" href="$main_8cpp_source.html" title=" " alt="" coords="454,229,559,256"/>
+<area shape="rect" id="node7" href="$polyQualityMeasures_8cpp_source.html" title=" " alt="" coords="5,155,216,181"/>
+</map>

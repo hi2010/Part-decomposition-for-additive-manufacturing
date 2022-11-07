@@ -1,0 +1,5 @@
+<map id="inc/modifiedClipClosedSurface.hpp" name="inc/modifiedClipClosedSurface.hpp">
+<area shape="rect" id="node1" title="a modified version of clip closed surface, that adds inheritance information in form of parent cell t..." alt="" coords="61,5,310,32"/>
+<area shape="rect" id="node2" href="$lVtkHelper_8cpp_source.html" title=" " alt="" coords="5,80,147,107"/>
+<area shape="rect" id="node3" href="$modifiedClipClosedSurface_8cpp.html" title="added parentId, the code is mostly copied from the one vtk uses" alt="" coords="171,80,419,107"/>
+</map>

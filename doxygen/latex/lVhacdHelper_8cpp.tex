@@ -1,0 +1,78 @@
+\hypertarget{lVhacdHelper_8cpp}{}\doxysection{src/l\+Vhacd\+Helper.cpp File Reference}
+\label{lVhacdHelper_8cpp}\index{src/lVhacdHelper.cpp@{src/lVhacdHelper.cpp}}
+
+
+copied from kmammou\textquotesingle{}s v-\/hacd  
+
+
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include \char`\"{}l\+Vhacd\+Helper.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}V\+H\+A\+C\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ocl\+Helper.\+h\char`\"{}}\newline
+Include dependency graph for l\+Vhacd\+Helper.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lVhacdHelper_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_a25b88d63570bff12574f67475b4bffda}\label{lVhacdHelper_8cpp_a25b88d63570bff12574f67475b4bffda}} 
+void {\bfseries Usage} (const \mbox{\hyperlink{structParameters}{Parameters}} \&params)
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_a0f628f827e5d5a49ea8d7f40635bb2de}\label{lVhacdHelper_8cpp_a0f628f827e5d5a49ea8d7f40635bb2de}} 
+void {\bfseries Parse\+Parameters} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structParameters}{Parameters}} \&params)
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_ae91f8bff646ca0bb517b1e78e10b6274}\label{lVhacdHelper_8cpp_ae91f8bff646ca0bb517b1e78e10b6274}} 
+void {\bfseries Get\+File\+Extension} (const string \&file\+Name, string \&file\+Extension)
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_a3cebbca462bc22b3f15be7e5b391838d}\label{lVhacdHelper_8cpp_a3cebbca462bc22b3f15be7e5b391838d}} 
+void {\bfseries Compute\+Random\+Color} (\mbox{\hyperlink{structMaterial}{Material}} \&mat)
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_afa2dadca5abe1546e1e69f56257f349f}\label{lVhacdHelper_8cpp_afa2dadca5abe1546e1e69f56257f349f}} 
+bool {\bfseries Load\+O\+FF} (const string \&file\+Name, vector$<$ float $>$ \&points, vector$<$ int $>$ \&triangles, I\+V\+H\+A\+C\+D\+::\+I\+User\+Logger \&logger)
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_aa10a7fd8be647a5d463385123ed7b318}\label{lVhacdHelper_8cpp_aa10a7fd8be647a5d463385123ed7b318}} 
+bool {\bfseries Load\+O\+BJ} (const string \&file\+Name, vector$<$ float $>$ \&points, vector$<$ int $>$ \&triangles, I\+V\+H\+A\+C\+D\+::\+I\+User\+Logger \&logger)
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_a1d4884865703154cc513b8d16bac9edf}\label{lVhacdHelper_8cpp_a1d4884865703154cc513b8d16bac9edf}} 
+bool {\bfseries Save\+O\+FF} (const string \&file\+Name, const float $\ast$const \&points, const int $\ast$const \&triangles, const unsigned int \&n\+Points, const unsigned int \&n\+Triangles, I\+V\+H\+A\+C\+D\+::\+I\+User\+Logger \&logger)
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_af97b4a0490697717e4a280e3e37a488d}\label{lVhacdHelper_8cpp_af97b4a0490697717e4a280e3e37a488d}} 
+bool {\bfseries Save\+V\+R\+M\+L2} (ofstream \&fout, const double $\ast$const \&points, const int $\ast$const \&triangles, const unsigned int \&n\+Points, const unsigned int \&n\+Triangles, const \mbox{\hyperlink{structMaterial}{Material}} \&material, I\+V\+H\+A\+C\+D\+::\+I\+User\+Logger \&logger)
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_a914dbbd9f04939fb2295afb0aa87d645}\label{lVhacdHelper_8cpp_a914dbbd9f04939fb2295afb0aa87d645}} 
+bool {\bfseries Save\+O\+BJ} (ofstream \&fout, const double $\ast$const \&points, const int $\ast$const \&triangles, const unsigned int \&n\+Points, const unsigned int \&n\+Triangles, const \mbox{\hyperlink{structMaterial}{Material}} \&material, I\+V\+H\+A\+C\+D\+::\+I\+User\+Logger \&logger, int convex\+Part, int vertex\+Offset)
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_a527f27d2de9a2fdfcf73bae1662f46a4}\label{lVhacdHelper_8cpp_a527f27d2de9a2fdfcf73bae1662f46a4}} 
+void {\bfseries Compute\+Vhacd\+And\+Time\+It} (std\+::vector$<$ l\+Vtk\+Helper\+::\+V\+H\+A\+C\+D\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+PE $>$ \&v\+Points, std\+::vector$<$ l\+Vtk\+Helper\+::\+V\+H\+A\+C\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE $>$ \&v\+Triangles, V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters \&params)
+\item 
+\mbox{\Hypertarget{lVhacdHelper_8cpp_a72d156b04d673cf2013d8774de70deff}\label{lVhacdHelper_8cpp_a72d156b04d673cf2013d8774de70deff}} 
+std\+::string {\bfseries get\+Parameters\+As\+Json\+String} (V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters params)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+copied from kmammou\textquotesingle{}s v-\/hacd 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/08-\/29
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}

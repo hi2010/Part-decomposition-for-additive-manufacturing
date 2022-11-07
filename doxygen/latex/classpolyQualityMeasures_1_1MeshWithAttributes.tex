@@ -1,0 +1,851 @@
+\hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes}{}\doxysection{poly\+Quality\+Measures\+::Mesh\+With\+Attributes Class Reference}
+\label{classpolyQualityMeasures_1_1MeshWithAttributes}\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+
+
+Collaboration diagram for poly\+Quality\+Measures\+::Mesh\+With\+Attributes\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpolyQualityMeasures_1_1MeshWithAttributes__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpolyQualityMeasures_1_1MeshWithAttributes_1_1sGapPtsAndCost}{s\+Gap\+Pts\+And\+Cost}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_aa08c4d29d40035b9e49895e97ac2d67f}\label{classpolyQualityMeasures_1_1MeshWithAttributes_aa08c4d29d40035b9e49895e97ac2d67f}} 
+void {\bfseries set\+Build\+Volume} (vtk\+Bounding\+Box bv)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a161dcb6c91ca527de8d56f20c40f99dd}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a161dcb6c91ca527de8d56f20c40f99dd}} 
+void {\bfseries set\+Build\+Volume} (double x\+Len, double y\+Len, double z\+Len)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_ac76a53ba1ce2a6eb4e36e67ae6701388}\label{classpolyQualityMeasures_1_1MeshWithAttributes_ac76a53ba1ce2a6eb4e36e67ae6701388}} 
+{\bfseries Mesh\+With\+Attributes} (const \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \&mwa)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a96a9a05e506eb5d70783ea6e1356ce9d}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a96a9a05e506eb5d70783ea6e1356ce9d}} 
+\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \& {\bfseries operator=} (const \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \&original)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_af9b302550969d3773d75f814407a6420}\label{classpolyQualityMeasures_1_1MeshWithAttributes_af9b302550969d3773d75f814407a6420}} 
+\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \& {\bfseries copy\+Mwa} (const \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \&original, \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \&target)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a9fb9835bf89751d3b44fb77f64558275}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a9fb9835bf89751d3b44fb77f64558275}} 
+\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \& {\bfseries copy\+Mwa} (const \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \&original)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a14ecf7a262672fc1f8b659175af28084}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a14ecf7a262672fc1f8b659175af28084}} 
+\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \& {\bfseries copy\+Without\+Meshes} (const \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \&original, \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \&target)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a27a4d9df5d9e8f517399e776d87e5166}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a27a4d9df5d9e8f517399e776d87e5166}} 
+\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \& {\bfseries copy\+Without\+Meshes} (const \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} \&original)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a75422cc18f85ed808b137d49cd9ca8a9}{get\+To\+Print\+Dir\+Rotated\+Mesh}} (vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ applied\+Transform=nullptr)
+\begin{DoxyCompactList}\small\item\em Get the To Print Dir Rotated Mesh object. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a0857349b86b8293ef2aa0607ec218fde}{get\+Bbx\+Aligned\+Mesh}} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly, vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ applied\+Transform=nullptr)
+\begin{DoxyCompactList}\small\item\em Get the Bbx Aligned Mesh object. Align the poly bbx with the printer build volume by rotation around z axis, so that the long x or y side of the poly is aligned with the long x or y side of the printer. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_add87a22f9e42375ddf82823df916a7f8}{get\+Align\+Bbxs\+Transform}} (vtk\+Bounding\+Box printer\+Bbx, vtk\+Bounding\+Box part\+Bbx)
+\begin{DoxyCompactList}\small\item\em Get the transform (0, 90°) that alignes the longest x or y side of the printer with the parts longest x or y side. \end{DoxyCompactList}\item 
+vtk\+Bounding\+Box \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_af2058ea28deceee5744122eda173e90b}{get\+Poly\+Bounds\+As\+Vtk\+Bounding\+Box}} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly)
+\begin{DoxyCompactList}\small\item\em Get the Poly Bounds As Vtk Bounding Box object. \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a78e7a78a817858992c580d0fcb9db3c2}{get\+Origin\+Translation\+For\+Rotated\+Mesh}} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly, bool needs\+Rotation=true, bool align\+Bbxs=true, vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ applied\+Rotation\+Transform=nullptr, vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ applied\+Align\+Bbxs\+Transform=nullptr, vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ total\+Transform=nullptr)
+\begin{DoxyCompactList}\small\item\em Get the Origin Translation For Rotated Mesh object, meaning\+: after the mesh got rotated so the print direction is the z direction (\char`\"{}rotate so that print direction vector and z direction vector are the same\char`\"{}) the mesh needs to be translated so it\textquotesingle{}s start coordinates are (0, 0, 0) and end coordinates are (x\+Width, y\+Witdh, z\+Width) this is needed so the part can be printed easily without any further steps also i think there is something in the 3mf specs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a8a296841ba085f101f2f8e0b243db8b5}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a8a296841ba085f101f2f8e0b243db8b5}} 
+vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ {\bfseries get\+Origin\+Translation\+For\+Rotated\+Mesh} ()
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a9aa0d6f221560e1e218b26245c4de17b}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a9aa0d6f221560e1e218b26245c4de17b}} 
+vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ {\bfseries get\+Origin\+Translation\+For\+Rotated\+Mesh} (vtk\+Transform $\ast$total\+Transform)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_aeb15a8a9d45ddf8942a5fec14059fd15}\label{classpolyQualityMeasures_1_1MeshWithAttributes_aeb15a8a9d45ddf8942a5fec14059fd15}} 
+vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ {\bfseries get\+Print\+Rotation\+And\+Origin\+Translation\+As\+Transform} ()
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_ad5846c692099eff273035501698ee062}{get\+Mesh\+Origined\+Rotated\+To\+Print\+Dir}} (vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ total\+Applied\+Transform=nullptr)
+\begin{DoxyCompactList}\small\item\em Get the Mesh Origined Rotated To Print Dir object orients this mesh so that the print dir is the global z dir and the longest side of the printer and the part are aligned. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\vtk\+Smart\+Pointer$<$ T $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a601913215699c7950636661150c44618}{safe\+Get\+Locator}} (vtk\+Smart\+Pointer$<$ T $>$ target\+Pointer, bool force=false)
+\begin{DoxyCompactList}\small\item\em get a cell locator. If it does not exist, create it, also creates links if needed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a2982860939f6a19d4c2e0f977dae2cee}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a2982860939f6a19d4c2e0f977dae2cee}} 
+vtk\+Smart\+Pointer$<$ vtk\+O\+B\+B\+Tree $>$ {\bfseries get\+Obb\+Tree} (bool force=false)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a0a18dab618a937e46ca647d90e740077}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a0a18dab618a937e46ca647d90e740077}} 
+vtk\+Smart\+Pointer$<$ vtk\+Modified\+B\+S\+P\+Tree $>$ {\bfseries get\+Modified\+Bsp\+Tree} (bool force=false)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a1d62e8ead2b4d9f651c5a6d543b89605}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a1d62e8ead2b4d9f651c5a6d543b89605}} 
+vtk\+Smart\+Pointer$<$ vtk\+Cell\+Tree\+Locator $>$ {\bfseries get\+Cell\+Tree\+Locator} (bool force=false)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a03a7c629db695ea27ed6c78918518d35}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a03a7c629db695ea27ed6c78918518d35}} 
+vtk\+Smart\+Pointer$<$ vtk\+Static\+Cell\+Locator $>$ {\bfseries get\+Static\+Cell\+Locator} (bool force=false)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a1d88685527a2eca276e94f2d4aeef75c}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a1d88685527a2eca276e94f2d4aeef75c}} 
+vtk\+Smart\+Pointer$<$ vtk\+Static\+Cell\+Locator $>$ {\bfseries get\+Cell\+Locator} (bool force=false)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Data\+Array $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a24f506ac4baea0806dd994b76d6feb48}{get\+Mesh\+Cell\+Normals}} (bool force=false)
+\begin{DoxyCompactList}\small\item\em safe access to the mesh normals of this mesh, if none exist they get calulated \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_aafa6329186ff0f94762e23e5169366bc}\label{classpolyQualityMeasures_1_1MeshWithAttributes_aafa6329186ff0f94762e23e5169366bc}} 
+vtk\+Smart\+Pointer$<$ vtk\+Data\+Array $>$ {\bfseries get\+Ch\+Cell\+Normals} ()
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_aebce1e4a694fe442f0e19a18dd99e148}\label{classpolyQualityMeasures_1_1MeshWithAttributes_aebce1e4a694fe442f0e19a18dd99e148}} 
+vtk\+Data\+Array $\ast$ {\bfseries get\+Mesh\+Tri\+Areas} (bool force=false)
+\item 
+vtk\+Data\+Array $\ast$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a5320e5aa62bff034b092b8a2870adb35}{get\+Mesh\+Cell\+Centers}} (bool force=false)
+\begin{DoxyCompactList}\small\item\em calculates the cell centers if needed, they get added as an cell array with name defined in C\+E\+L\+L\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+A\+R\+R\+\_\+\+N\+A\+ME \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Id\+List $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a6445091e407c4765df31a80ae4d6b39f}{get\+Mesh\+Gap\+Cells}} (bool force=false)
+\begin{DoxyCompactList}\small\item\em get the ids of the cells that have a gap which is to small according to the gap criteria (normal ray from center -\/$>$ collision = distance) \end{DoxyCompactList}\item 
+vtk\+Id\+Type \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a636c3376ab047ad303bc54d2382fca0d}{get\+Greatest\+C\+H\+Cell\+Id}} ()
+\begin{DoxyCompactList}\small\item\em get the id of the gretest cell of the ch. Calculate if needed \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_aecae1c797239b39a0a4b6b4dba84c2e4}{planes\+Equal}} (const vtk\+Smart\+Pointer$<$ vtk\+Plane $>$ \&x, const vtk\+Smart\+Pointer$<$ vtk\+Plane $>$ \&y) const
+\begin{DoxyCompactList}\small\item\em check if 2 planes are equal up to some error\+Margin, equal\+: same normal and points are one one plane with that normal \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a0d0e6510df2e342fe8d5d35109178a1a}{plane\+In\+Vec}} (const std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Plane $>$$>$ \&plane\+Vec, const vtk\+Smart\+Pointer$<$ vtk\+Plane $>$ new\+Plane)
+\begin{DoxyCompactList}\small\item\em check if plane\+Vec contains a plane that is equal to new plane, equal\+: same normal and point on the same plane \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a879ebbad04b641acdaf9795669880f85}{insert\+Unique\+Plane\+In\+Vec}} (std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Plane $>$$>$ \&plane\+Vec, vtk\+Smart\+Pointer$<$ vtk\+Plane $>$ new\+Plane)
+\begin{DoxyCompactList}\small\item\em insert new plane to plane vector only if no equal plane exists, equal\+: same normal and point on the same plane \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Plane\+Collection $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_af81fb6b7aa6642f60c88d11b84cb82be}{get\+Ch\+Cells\+As\+Planes}} (bool invert\+Normals=true, bool filter\+Out\+No\+Cut\+Planes=true)
+\begin{DoxyCompactList}\small\item\em get the convex hull as set of unique planes / bounding planes \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a2076537ca7f1b2bb0c03594b7b0203a6}{create\+Links\+If\+Needed}} (bool force=false)
+\begin{DoxyCompactList}\small\item\em Create a Links If Needed for the mesh, f.\+e. needed for cell locator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_ada5adefd5126d1b69d5b5c24256fbc53}{cut\+Mesh\+With\+Ch}} ()
+\begin{DoxyCompactList}\small\item\em cut this-\/$>$mesh by this-\/$>$convex\+Hull ! might produce not watertight bodys \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_adb53314306da6f284d8c1cf1b489ff88}{get\+Print\+Dir\+As\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Get the Print Dir As Transform object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a65b33df698f5515d8a3aa96521c59093}{check\+Feasibility}} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly, double max\+Print\+Diagonal, double cost\+Feasability)
+\begin{DoxyCompactList}\small\item\em check if the poly is feasible / the diagonal is smaller than the max print diagonal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a0e5ddac835075b21ce0fc2f1ae3649ad}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a0e5ddac835075b21ce0fc2f1ae3649ad}} 
+double {\bfseries check\+Feasibility} (\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} $\ast$meshwa)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a0062f3349f54bc700547c590f9a8e705}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a0062f3349f54bc700547c590f9a8e705}} 
+double {\bfseries check\+Feasibility} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a37a91629bdd106b19c68bda36c21b522}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a37a91629bdd106b19c68bda36c21b522}} 
+double {\bfseries check\+Feasibility} ()
+\item 
+double \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_ae9c9f45031ea0eadbce6003bffb85d8a}{calculate\+Rcuts}} (double original\+Len, double target\+Len)
+\begin{DoxyCompactList}\small\item\em calcualte the number of cuts, as real number, needed so that original len fits in target len \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_afbe176d07df070a701585fa2c6c1102f}{calculate\+Ncuts}} (double val\+Rcuts)
+\begin{DoxyCompactList}\small\item\em calcualte the integer number of cuts from the rcuts \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a68a0e203e39a7aba07660c410c25051d}{calculate\+Ncuts}} (double original\+Len, double target\+Len)
+\begin{DoxyCompactList}\small\item\em calculate the integer number of cuts needed so that original len fits in target len \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a5313f29d629139614d31cfaf1f3e67ad}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a5313f29d629139614d31cfaf1f3e67ad}} 
+double {\bfseries calculate\+L\+Rem} (double original\+Len, double target\+Len)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a272954ffdff5e9e8df5180ecab69c6ae}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a272954ffdff5e9e8df5180ecab69c6ae}} 
+double {\bfseries calculate\+L\+Offset} (double original\+Len, double target\+Len)
+\item 
+bool \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a3db66c2ca54798c1f9c9f7853ef12c2b}{bbx\+Fits\+In\+Bbx}} (vtk\+Bounding\+Box inner\+Bbx, vtk\+Bounding\+Box outer\+Bbx)
+\begin{DoxyCompactList}\small\item\em check if inner bbx fits in outer bbx, with some upper\+Tol erance added to the size of the outer bbx \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_ab34087a437b9de21ffa5585b0688fd6b}\label{classpolyQualityMeasures_1_1MeshWithAttributes_ab34087a437b9de21ffa5585b0688fd6b}} 
+std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ $>$ {\bfseries cut\+Along\+Axis\+Until\+It\+Fits} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly, double original\+Len, double target\+Len, int dir)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a649e5c6d9dc49882730df186102417a8}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a649e5c6d9dc49882730df186102417a8}} 
+std\+::tuple$<$ vtk\+Smart\+Pointer$<$ vtk\+Plane\+Collection $>$, vtk\+Smart\+Pointer$<$ vtk\+Plane\+Collection $>$ $>$ {\bfseries get\+Cutting\+Planes\+Trough\+Center\+Of\+Mass} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ original\+Mesh)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} $>$ \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a78cf19724e6b9d4a63743cd49f86bb00}{cut\+Until\+Printable}} ()
+\begin{DoxyCompactList}\small\item\em cut this mesh unitl every part does fit in the printers build volume, the part gets oriented to the print dir before all the checks and cutting gets done, and transformed to default afterwards. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_af0b9a6d9a1f4f2ac4e2db98aac2ccf5f}{calculate\+Print\+Dir\+From\+Ch}} ()
+\begin{DoxyCompactList}\small\item\em calculate the normal of the biggest cell of the convex hull as print direction (as described in the paper) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_ac569c04867b9f3e942b9f5c8b2f82bc6}\label{classpolyQualityMeasures_1_1MeshWithAttributes_ac569c04867b9f3e942b9f5c8b2f82bc6}} 
+double {\bfseries calculate\+Mesh\+Cell\+Area} (vtk\+Id\+Type i)
+\item 
+void \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_af9a8fbe8ebad914bf69270303a93e90b}{compute\+Mesh\+Greatest\+Cell\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Get the Greatest Facet Id of the object. The mesh needs to be a trimesh. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a4721fafcc04fe8f2d0416cb86a3dc301}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a4721fafcc04fe8f2d0416cb86a3dc301}} 
+void {\bfseries compute\+C\+H\+Greatest\+Cell\+Id} ()
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_ac62c8d5b6b7e11d5c2dcd0fdbe5611eb}\label{classpolyQualityMeasures_1_1MeshWithAttributes_ac62c8d5b6b7e11d5c2dcd0fdbe5611eb}} 
+void {\bfseries clean\+Mesh} ()
+\item 
+void \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_abe8fa16cd4181751422f6f968e89098d}{append\+Distance\+Field\+Ip}} ()
+\begin{DoxyCompactList}\small\item\em append a cell array called Distances to this mesh. The values of the array are the distances from the cell center in normal direction until intersection with any other cell of this mesh \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes_a4b84f3b4efbf804a7a90cbb70d3bad57}{compute\+Gap\+Tris}} ()
+\begin{DoxyCompactList}\small\item\em compute the cells that create to small gapps according to the gap criteria. this-\/$>$gap\+Cells \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a6cfc67253ce9e5588d5110a334acffb6}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a6cfc67253ce9e5588d5110a334acffb6}} 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ {\bfseries mesh}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a1966a158f236d746fd82b6f6fef6c2ca}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a1966a158f236d746fd82b6f6fef6c2ca}} 
+vtk\+Vector3d {\bfseries print\+Dir} = vtk\+Vector3d(0, 0, 1)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a56dd7ef1018fc459cbb55a2106c5dfee}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a56dd7ef1018fc459cbb55a2106c5dfee}} 
+double {\bfseries overhang\+Angle} = 45 $\ast$ M\+\_\+\+PI / 180
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_aa0109d6d20cdae073cfafe4bd52e27f4}\label{classpolyQualityMeasures_1_1MeshWithAttributes_aa0109d6d20cdae073cfafe4bd52e27f4}} 
+vtk\+Id\+Type {\bfseries greatest\+Cell\+Id}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_aafd34ce018498e61e6175fb247947507}\label{classpolyQualityMeasures_1_1MeshWithAttributes_aafd34ce018498e61e6175fb247947507}} 
+double {\bfseries greatest\+Cell\+Size} = 0
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a0eed8b7928abc22780d5cd3aeb844758}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a0eed8b7928abc22780d5cd3aeb844758}} 
+double {\bfseries cost\+Feasability} = 1000
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a14bedb9843a59990a65b0010fe9a0f0b}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a14bedb9843a59990a65b0010fe9a0f0b}} 
+double {\bfseries max\+Print\+Diagonal} = 100 $\ast$ 100 $\ast$ 100
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a4a9060b0e7775e3697a9524992c696a9}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a4a9060b0e7775e3697a9524992c696a9}} 
+vtk\+Bounding\+Box {\bfseries printer\+Build\+Volume}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a875823c27f3eee8c977d8545a48efd7b}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a875823c27f3eee8c977d8545a48efd7b}} 
+double {\bfseries sharp\+Corners\+Angle} = M\+\_\+\+PI $\ast$ (170. / 180.)
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_acd590b75a226f982fc539444f01a883d}\label{classpolyQualityMeasures_1_1MeshWithAttributes_acd590b75a226f982fc539444f01a883d}} 
+double {\bfseries gap\+Distance} = 2
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a02442e69869e34f486241d769ba6e2da}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a02442e69869e34f486241d769ba6e2da}} 
+bool {\bfseries links\+Created} = false
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a33bdb7864b6c284da2ff84b03aa86137}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a33bdb7864b6c284da2ff84b03aa86137}} 
+double {\bfseries lower\+Tol} = 1e-\/13
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a24d9827a6093136b2cee3665acf8b7cf}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a24d9827a6093136b2cee3665acf8b7cf}} 
+vtk\+Smart\+Pointer$<$ vtk\+Id\+List $>$ {\bfseries gap\+Cells}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_acad8aefe0b873aca5e17373739bfb0a1}\label{classpolyQualityMeasures_1_1MeshWithAttributes_acad8aefe0b873aca5e17373739bfb0a1}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries vec\+Gap\+Cell\+Bnds}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a175290941fcf3ac2c36b25030527d7a1}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a175290941fcf3ac2c36b25030527d7a1}} 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ {\bfseries convex\+Hull}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a5e2890471ac84210255afbe18fc2adb3}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a5e2890471ac84210255afbe18fc2adb3}} 
+vtk\+Id\+Type {\bfseries greatest\+C\+H\+Cell\+Id}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_ac7651256678a57a04fd2bbfa6365dcfc}\label{classpolyQualityMeasures_1_1MeshWithAttributes_ac7651256678a57a04fd2bbfa6365dcfc}} 
+double {\bfseries greatest\+C\+H\+Cell\+Size} = 0
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a5a98035f0c79612ff978130cb5317007}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a5a98035f0c79612ff978130cb5317007}} 
+vtk\+Smart\+Pointer$<$ vtk\+O\+B\+B\+Tree $>$ {\bfseries obb\+Tree}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a8d18b96dd8dee36a5f7f4ea4f789cfee}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a8d18b96dd8dee36a5f7f4ea4f789cfee}} 
+vtk\+Smart\+Pointer$<$ vtk\+Modified\+B\+S\+P\+Tree $>$ {\bfseries modified\+Bsp\+Tree}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a0e433905fb8a0d7b468efcec77fbda73}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a0e433905fb8a0d7b468efcec77fbda73}} 
+vtk\+Smart\+Pointer$<$ vtk\+Cell\+Tree\+Locator $>$ {\bfseries cell\+Tree\+Locator}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a31fd42bbd896892610940e6aa1921804}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a31fd42bbd896892610940e6aa1921804}} 
+vtk\+Smart\+Pointer$<$ vtk\+Static\+Cell\+Locator $>$ {\bfseries static\+Cell\+Locator}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a01bfc5a59f859af177c0ed81db34f599}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a01bfc5a59f859af177c0ed81db34f599}} 
+vtk\+Smart\+Pointer$<$ vtk\+Cell\+Tree\+Locator $>$ {\bfseries ch\+Cell\+Tree\+Locator}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a7d7eff1c4d5a0cea2893b2221ed6029f}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a7d7eff1c4d5a0cea2893b2221ed6029f}} 
+double {\bfseries gap\+Cost} = -\/1
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a5708e82065379028ee4558b32d213b96}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a5708e82065379028ee4558b32d213b96}} 
+struct \mbox{\hyperlink{structpolyQualityMeasures_1_1MeshWithAttributes_1_1sGapPtsAndCost}{s\+Gap\+Pts\+And\+Cost}} {\bfseries gap\+Pts\+And\+Cost}
+\item 
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a59233ce0bd21cf57c398c8e1c3feba2a}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a59233ce0bd21cf57c398c8e1c3feba2a}} 
+double {\bfseries upper\+Tol} = .\+9999999
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 56 of file mesh\+With\+Attributes.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_abe8fa16cd4181751422f6f968e89098d}\label{classpolyQualityMeasures_1_1MeshWithAttributes_abe8fa16cd4181751422f6f968e89098d}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!appendDistanceFieldIp@{appendDistanceFieldIp}}
+\index{appendDistanceFieldIp@{appendDistanceFieldIp}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{appendDistanceFieldIp()}{appendDistanceFieldIp()}}
+{\footnotesize\ttfamily void poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::append\+Distance\+Field\+Ip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+append a cell array called Distances to this mesh. The values of the array are the distances from the cell center in normal direction until intersection with any other cell of this mesh 
+
+
+
+Definition at line 1426 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a3db66c2ca54798c1f9c9f7853ef12c2b}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a3db66c2ca54798c1f9c9f7853ef12c2b}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!bbxFitsInBbx@{bbxFitsInBbx}}
+\index{bbxFitsInBbx@{bbxFitsInBbx}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{bbxFitsInBbx()}{bbxFitsInBbx()}}
+{\footnotesize\ttfamily bool poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::bbx\+Fits\+In\+Bbx (\begin{DoxyParamCaption}\item[{vtk\+Bounding\+Box}]{inner\+Bbx,  }\item[{vtk\+Bounding\+Box}]{outer\+Bbx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+check if inner bbx fits in outer bbx, with some upper\+Tol erance added to the size of the outer bbx 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inner\+Bbx} & \\
+\hline
+{\em outer\+Bbx} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Definition at line 889 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a68a0e203e39a7aba07660c410c25051d}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a68a0e203e39a7aba07660c410c25051d}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!calculateNcuts@{calculateNcuts}}
+\index{calculateNcuts@{calculateNcuts}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{calculateNcuts()}{calculateNcuts()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::calculate\+Ncuts (\begin{DoxyParamCaption}\item[{double}]{original\+Len,  }\item[{double}]{target\+Len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculate the integer number of cuts needed so that original len fits in target len 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original\+Len} & \\
+\hline
+{\em target\+Len} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 867 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_afbe176d07df070a701585fa2c6c1102f}\label{classpolyQualityMeasures_1_1MeshWithAttributes_afbe176d07df070a701585fa2c6c1102f}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!calculateNcuts@{calculateNcuts}}
+\index{calculateNcuts@{calculateNcuts}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{calculateNcuts()}{calculateNcuts()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::calculate\+Ncuts (\begin{DoxyParamCaption}\item[{double}]{val\+Rcuts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calcualte the integer number of cuts from the rcuts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+Rcuts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 859 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_af0b9a6d9a1f4f2ac4e2db98aac2ccf5f}\label{classpolyQualityMeasures_1_1MeshWithAttributes_af0b9a6d9a1f4f2ac4e2db98aac2ccf5f}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!calculatePrintDirFromCh@{calculatePrintDirFromCh}}
+\index{calculatePrintDirFromCh@{calculatePrintDirFromCh}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{calculatePrintDirFromCh()}{calculatePrintDirFromCh()}}
+{\footnotesize\ttfamily void poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::calculate\+Print\+Dir\+From\+Ch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculate the normal of the biggest cell of the convex hull as print direction (as described in the paper) 
+
+
+
+Definition at line 1375 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_ae9c9f45031ea0eadbce6003bffb85d8a}\label{classpolyQualityMeasures_1_1MeshWithAttributes_ae9c9f45031ea0eadbce6003bffb85d8a}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!calculateRcuts@{calculateRcuts}}
+\index{calculateRcuts@{calculateRcuts}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{calculateRcuts()}{calculateRcuts()}}
+{\footnotesize\ttfamily double poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::calculate\+Rcuts (\begin{DoxyParamCaption}\item[{double}]{original\+Len,  }\item[{double}]{target\+Len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calcualte the number of cuts, as real number, needed so that original len fits in target len 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original\+Len} & \\
+\hline
+{\em target\+Len} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 847 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a65b33df698f5515d8a3aa96521c59093}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a65b33df698f5515d8a3aa96521c59093}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!checkFeasibility@{checkFeasibility}}
+\index{checkFeasibility@{checkFeasibility}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{checkFeasibility()}{checkFeasibility()}}
+{\footnotesize\ttfamily double poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::check\+Feasibility (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{poly,  }\item[{double}]{max\+Print\+Diagonal,  }\item[{double}]{cost\+Feasability }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+check if the poly is feasible / the diagonal is smaller than the max print diagonal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & \\
+\hline
+{\em max\+Print\+Diagonal} & \\
+\hline
+{\em cost\+Feasability} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 815 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a4b84f3b4efbf804a7a90cbb70d3bad57}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a4b84f3b4efbf804a7a90cbb70d3bad57}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!computeGapTris@{computeGapTris}}
+\index{computeGapTris@{computeGapTris}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{computeGapTris()}{computeGapTris()}}
+{\footnotesize\ttfamily void poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::compute\+Gap\+Tris (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+compute the cells that create to small gapps according to the gap criteria. this-\/$>$gap\+Cells 
+
+
+
+Definition at line 1507 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_af9a8fbe8ebad914bf69270303a93e90b}\label{classpolyQualityMeasures_1_1MeshWithAttributes_af9a8fbe8ebad914bf69270303a93e90b}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!computeMeshGreatestCellId@{computeMeshGreatestCellId}}
+\index{computeMeshGreatestCellId@{computeMeshGreatestCellId}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{computeMeshGreatestCellId()}{computeMeshGreatestCellId()}}
+{\footnotesize\ttfamily void poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::compute\+Mesh\+Greatest\+Cell\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Greatest Facet Id of the object. The mesh needs to be a trimesh. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 1406 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a2076537ca7f1b2bb0c03594b7b0203a6}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a2076537ca7f1b2bb0c03594b7b0203a6}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!createLinksIfNeeded@{createLinksIfNeeded}}
+\index{createLinksIfNeeded@{createLinksIfNeeded}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{createLinksIfNeeded()}{createLinksIfNeeded()}}
+{\footnotesize\ttfamily bool poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::create\+Links\+If\+Needed (\begin{DoxyParamCaption}\item[{bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a Links If Needed for the mesh, f.\+e. needed for cell locator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Definition at line 710 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_ada5adefd5126d1b69d5b5c24256fbc53}\label{classpolyQualityMeasures_1_1MeshWithAttributes_ada5adefd5126d1b69d5b5c24256fbc53}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!cutMeshWithCh@{cutMeshWithCh}}
+\index{cutMeshWithCh@{cutMeshWithCh}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{cutMeshWithCh()}{cutMeshWithCh()}}
+{\footnotesize\ttfamily void poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::cut\+Mesh\+With\+Ch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+cut this-\/$>$mesh by this-\/$>$convex\+Hull ! might produce not watertight bodys 
+
+
+
+Definition at line 725 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a78cf19724e6b9d4a63743cd49f86bb00}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a78cf19724e6b9d4a63743cd49f86bb00}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!cutUntilPrintable@{cutUntilPrintable}}
+\index{cutUntilPrintable@{cutUntilPrintable}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{cutUntilPrintable()}{cutUntilPrintable()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}}$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::cut\+Until\+Printable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+cut this mesh unitl every part does fit in the printers build volume, the part gets oriented to the print dir before all the checks and cutting gets done, and transformed to default afterwards. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Mesh\+With\+Attributes$>$ the printable parts 
+\end{DoxyReturn}
+z-\/dir\+: cut\+Until\+Printable x-\/y-\/dir\+: align longest axes x-\/dir\+: cut\+Until\+Printable y-\/dir\+: cut\+Until\+Printable
+
+Definition at line 1083 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_add87a22f9e42375ddf82823df916a7f8}\label{classpolyQualityMeasures_1_1MeshWithAttributes_add87a22f9e42375ddf82823df916a7f8}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getAlignBbxsTransform@{getAlignBbxsTransform}}
+\index{getAlignBbxsTransform@{getAlignBbxsTransform}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getAlignBbxsTransform()}{getAlignBbxsTransform()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Transform$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Align\+Bbxs\+Transform (\begin{DoxyParamCaption}\item[{vtk\+Bounding\+Box}]{printer\+Bbx,  }\item[{vtk\+Bounding\+Box}]{part\+Bbx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the transform (0, 90°) that alignes the longest x or y side of the printer with the parts longest x or y side. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em printer\+Bbx} & the bbx of the printer \\
+\hline
+{\em part\+Bbx} & the bbx of the part \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Transform$>$ a rotation transform 
+\end{DoxyReturn}
+
+
+Definition at line 301 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a0857349b86b8293ef2aa0607ec218fde}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a0857349b86b8293ef2aa0607ec218fde}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getBbxAlignedMesh@{getBbxAlignedMesh}}
+\index{getBbxAlignedMesh@{getBbxAlignedMesh}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getBbxAlignedMesh()}{getBbxAlignedMesh()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Bbx\+Aligned\+Mesh (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{poly,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Transform $>$}]{applied\+Transform = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Bbx Aligned Mesh object. Align the poly bbx with the printer build volume by rotation around z axis, so that the long x or y side of the poly is aligned with the long x or y side of the printer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 277 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_af81fb6b7aa6642f60c88d11b84cb82be}\label{classpolyQualityMeasures_1_1MeshWithAttributes_af81fb6b7aa6642f60c88d11b84cb82be}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getChCellsAsPlanes@{getChCellsAsPlanes}}
+\index{getChCellsAsPlanes@{getChCellsAsPlanes}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getChCellsAsPlanes()}{getChCellsAsPlanes()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Plane\+Collection$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Ch\+Cells\+As\+Planes (\begin{DoxyParamCaption}\item[{bool}]{invert\+Normals = {\ttfamily true},  }\item[{bool}]{filter\+Out\+No\+Cut\+Planes = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the convex hull as set of unique planes / bounding planes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em invert\+Normals} & the normal direction. If they should point inwards (prbly true) or outwards \\
+\hline
+{\em filter\+Out\+No\+Cut\+Planes} & if the resulting planes should be filtered so only unique planes remain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Plane\+Collection$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 652 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a636c3376ab047ad303bc54d2382fca0d}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a636c3376ab047ad303bc54d2382fca0d}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getGreatestCHCellId@{getGreatestCHCellId}}
+\index{getGreatestCHCellId@{getGreatestCHCellId}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getGreatestCHCellId()}{getGreatestCHCellId()}}
+{\footnotesize\ttfamily vtk\+Id\+Type poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Greatest\+C\+H\+Cell\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the id of the gretest cell of the ch. Calculate if needed 
+
+\begin{DoxyReturn}{Returns}
+vtk\+Id\+Type 
+\end{DoxyReturn}
+
+
+Definition at line 562 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a5320e5aa62bff034b092b8a2870adb35}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a5320e5aa62bff034b092b8a2870adb35}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getMeshCellCenters@{getMeshCellCenters}}
+\index{getMeshCellCenters@{getMeshCellCenters}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getMeshCellCenters()}{getMeshCellCenters()}}
+{\footnotesize\ttfamily vtk\+Data\+Array$\ast$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Mesh\+Cell\+Centers (\begin{DoxyParamCaption}\item[{bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculates the cell centers if needed, they get added as an cell array with name defined in C\+E\+L\+L\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+A\+R\+R\+\_\+\+N\+A\+ME 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & if creation is forced even if they already exist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Data\+Array$\ast$ the cell center data 
+\end{DoxyReturn}
+
+
+Definition at line 532 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a24f506ac4baea0806dd994b76d6feb48}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a24f506ac4baea0806dd994b76d6feb48}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getMeshCellNormals@{getMeshCellNormals}}
+\index{getMeshCellNormals@{getMeshCellNormals}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getMeshCellNormals()}{getMeshCellNormals()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Data\+Array$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Mesh\+Cell\+Normals (\begin{DoxyParamCaption}\item[{bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+safe access to the mesh normals of this mesh, if none exist they get calulated 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & if normals should be created even if they already exist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Data\+Array$>$ the normals as array 
+\end{DoxyReturn}
+
+
+Definition at line 496 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a6445091e407c4765df31a80ae4d6b39f}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a6445091e407c4765df31a80ae4d6b39f}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getMeshGapCells@{getMeshGapCells}}
+\index{getMeshGapCells@{getMeshGapCells}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getMeshGapCells()}{getMeshGapCells()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Id\+List$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Mesh\+Gap\+Cells (\begin{DoxyParamCaption}\item[{bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the ids of the cells that have a gap which is to small according to the gap criteria (normal ray from center -\/$>$ collision = distance) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Id\+List$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 548 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_ad5846c692099eff273035501698ee062}\label{classpolyQualityMeasures_1_1MeshWithAttributes_ad5846c692099eff273035501698ee062}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getMeshOriginedRotatedToPrintDir@{getMeshOriginedRotatedToPrintDir}}
+\index{getMeshOriginedRotatedToPrintDir@{getMeshOriginedRotatedToPrintDir}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getMeshOriginedRotatedToPrintDir()}{getMeshOriginedRotatedToPrintDir()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Mesh\+Origined\+Rotated\+To\+Print\+Dir (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Transform $>$}]{total\+Applied\+Transform = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Mesh Origined Rotated To Print Dir object orients this mesh so that the print dir is the global z dir and the longest side of the printer and the part are aligned. 
+
+total\+Applied... -\/$>$ getter for applied transf
+
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 410 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a78e7a78a817858992c580d0fcb9db3c2}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a78e7a78a817858992c580d0fcb9db3c2}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getOriginTranslationForRotatedMesh@{getOriginTranslationForRotatedMesh}}
+\index{getOriginTranslationForRotatedMesh@{getOriginTranslationForRotatedMesh}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getOriginTranslationForRotatedMesh()}{getOriginTranslationForRotatedMesh()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Transform$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Origin\+Translation\+For\+Rotated\+Mesh (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{poly,  }\item[{bool}]{needs\+Rotation = {\ttfamily true},  }\item[{bool}]{align\+Bbxs = {\ttfamily true},  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Transform $>$}]{applied\+Rotation\+Transform = {\ttfamily nullptr},  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Transform $>$}]{applied\+Align\+Bbxs\+Transform = {\ttfamily nullptr},  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Transform $>$}]{total\+Transform = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Origin Translation For Rotated Mesh object, meaning\+: after the mesh got rotated so the print direction is the z direction (\char`\"{}rotate so that print direction vector and z direction vector are the same\char`\"{}) the mesh needs to be translated so it\textquotesingle{}s start coordinates are (0, 0, 0) and end coordinates are (x\+Width, y\+Witdh, z\+Width) this is needed so the part can be printed easily without any further steps also i think there is something in the 3mf specs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & needs\+Rotation\+: if the part needs to be rotated to z direction before calculation the translation or not. (default=true, because less harmfull if wrong)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Transform\+: the transform of the translation operation needed to bring the part to the origin (0,0,0) 
+\end{DoxyReturn}
+
+
+Definition at line 334 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_af2058ea28deceee5744122eda173e90b}\label{classpolyQualityMeasures_1_1MeshWithAttributes_af2058ea28deceee5744122eda173e90b}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getPolyBoundsAsVtkBoundingBox@{getPolyBoundsAsVtkBoundingBox}}
+\index{getPolyBoundsAsVtkBoundingBox@{getPolyBoundsAsVtkBoundingBox}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getPolyBoundsAsVtkBoundingBox()}{getPolyBoundsAsVtkBoundingBox()}}
+{\footnotesize\ttfamily vtk\+Bounding\+Box poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Poly\+Bounds\+As\+Vtk\+Bounding\+Box (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{poly }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Poly Bounds As Vtk Bounding Box object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & the mesh \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Bounding\+Box the bbx of poly 
+\end{DoxyReturn}
+
+
+Definition at line 315 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_adb53314306da6f284d8c1cf1b489ff88}\label{classpolyQualityMeasures_1_1MeshWithAttributes_adb53314306da6f284d8c1cf1b489ff88}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getPrintDirAsTransform@{getPrintDirAsTransform}}
+\index{getPrintDirAsTransform@{getPrintDirAsTransform}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getPrintDirAsTransform()}{getPrintDirAsTransform()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Transform$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+Print\+Dir\+As\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Print Dir As Transform object. 
+
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Transform$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 770 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a75422cc18f85ed808b137d49cd9ca8a9}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a75422cc18f85ed808b137d49cd9ca8a9}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!getToPrintDirRotatedMesh@{getToPrintDirRotatedMesh}}
+\index{getToPrintDirRotatedMesh@{getToPrintDirRotatedMesh}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{getToPrintDirRotatedMesh()}{getToPrintDirRotatedMesh()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::get\+To\+Print\+Dir\+Rotated\+Mesh (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Transform $>$}]{applied\+Transform = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the To Print Dir Rotated Mesh object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em applied\+Transform} & should assing the input pointer to the used transform if this is correct and it does not go out of scope \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 256 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a879ebbad04b641acdaf9795669880f85}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a879ebbad04b641acdaf9795669880f85}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!insertUniquePlaneInVec@{insertUniquePlaneInVec}}
+\index{insertUniquePlaneInVec@{insertUniquePlaneInVec}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{insertUniquePlaneInVec()}{insertUniquePlaneInVec()}}
+{\footnotesize\ttfamily bool poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::insert\+Unique\+Plane\+In\+Vec (\begin{DoxyParamCaption}\item[{std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Plane $>$$>$ \&}]{plane\+Vec,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Plane $>$}]{new\+Plane }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+insert new plane to plane vector only if no equal plane exists, equal\+: same normal and point on the same plane 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plane\+Vec} & \\
+\hline
+{\em new\+Plane} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Definition at line 637 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a0d0e6510df2e342fe8d5d35109178a1a}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a0d0e6510df2e342fe8d5d35109178a1a}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!planeInVec@{planeInVec}}
+\index{planeInVec@{planeInVec}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{planeInVec()}{planeInVec()}}
+{\footnotesize\ttfamily bool poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::plane\+In\+Vec (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Plane $>$$>$ \&}]{plane\+Vec,  }\item[{const vtk\+Smart\+Pointer$<$ vtk\+Plane $>$}]{new\+Plane }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+check if plane\+Vec contains a plane that is equal to new plane, equal\+: same normal and point on the same plane 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plane\+Vec} & \\
+\hline
+{\em new\+Plane} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Definition at line 619 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_aecae1c797239b39a0a4b6b4dba84c2e4}\label{classpolyQualityMeasures_1_1MeshWithAttributes_aecae1c797239b39a0a4b6b4dba84c2e4}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!planesEqual@{planesEqual}}
+\index{planesEqual@{planesEqual}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{planesEqual()}{planesEqual()}}
+{\footnotesize\ttfamily bool poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::planes\+Equal (\begin{DoxyParamCaption}\item[{const vtk\+Smart\+Pointer$<$ vtk\+Plane $>$ \&}]{x,  }\item[{const vtk\+Smart\+Pointer$<$ vtk\+Plane $>$ \&}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+check if 2 planes are equal up to some error\+Margin, equal\+: same normal and points are one one plane with that normal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & first plane \\
+\hline
+{\em y} & second plane \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true are equal 
+
+false are not equal 
+\end{DoxyReturn}
+
+
+Definition at line 577 of file mesh\+With\+Attributes.\+hpp.
+
+\mbox{\Hypertarget{classpolyQualityMeasures_1_1MeshWithAttributes_a601913215699c7950636661150c44618}\label{classpolyQualityMeasures_1_1MeshWithAttributes_a601913215699c7950636661150c44618}} 
+\index{polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}!safeGetLocator@{safeGetLocator}}
+\index{safeGetLocator@{safeGetLocator}!polyQualityMeasures::MeshWithAttributes@{polyQualityMeasures::MeshWithAttributes}}
+\doxysubsubsection{\texorpdfstring{safeGetLocator()}{safeGetLocator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+vtk\+Smart\+Pointer$<$T$>$ poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes\+::safe\+Get\+Locator (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ T $>$}]{target\+Pointer,  }\item[{bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get a cell locator. If it does not exist, create it, also creates links if needed 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the locator type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Pointer} & the pointer to which to assign the created object \\
+\hline
+{\em force} & if the creation / recreation is requested even if it already exists \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$\+T$>$ the pointer to the locator 
+\end{DoxyReturn}
+
+
+Definition at line 443 of file mesh\+With\+Attributes.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{meshWithAttributes_8hpp}{mesh\+With\+Attributes.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\hypertarget{l3mfHelper_8hpp}{}\doxysection{inc/l3mf\+Helper.hpp File Reference}
+\label{l3mfHelper_8hpp}\index{inc/l3mfHelper.hpp@{inc/l3mfHelper.hpp}}
+
+
+helper for reading of 3mf files  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}lib3mf\+\_\+implicit.\+hpp\char`\"{}}\newline
+Include dependency graph for l3mf\+Helper.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{l3mfHelper_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{l3mfHelper_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{l3mfHelper_8hpp_a0061f3ea45b784b083b932b34cfa73d0}{l3mf\+Helper\+::print\+Reader\+Warnings}} (Lib3\+M\+F\+::\+P\+Reader reader)
+\begin{DoxyCompactList}\small\item\em print warnings from the reader (after reading a file) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{l3mfHelper_8cpp_a4b485bf25f9a6ce03573be465c0c2ad6}\label{l3mfHelper_8cpp_a4b485bf25f9a6ce03573be465c0c2ad6}} 
+P\+Model {\bfseries l3mf\+Helper\+::get\+P\+Model\+From3mf\+File} (std\+::string s\+Filename, bool b\+Print\+Reader\+Warnings)
+\item 
+\mbox{\Hypertarget{l3mfHelper_8hpp_aa3c337247f5c04f68677eb8833fb4272}\label{l3mfHelper_8hpp_aa3c337247f5c04f68677eb8833fb4272}} 
+void {\bfseries l3mf\+Helper\+::print\+Metadata\+Group} (Lib3\+M\+F\+::\+P\+Meta\+Data\+Group meta)
+\item 
+void \mbox{\hyperlink{l3mfHelper_8hpp_a928148a0823aba0e14b41cfdc844da8f}{l3mf\+Helper\+::print3mf\+Version}} (Lib3\+M\+F\+::\+P\+Wrapper wrapper)
+\begin{DoxyCompactList}\small\item\em print the version of lib3mf \end{DoxyCompactList}\item 
+std\+::vector$<$ Lib3\+M\+F\+::\+P\+Mesh\+Object $>$ \mbox{\hyperlink{l3mfHelper_8hpp_a8d5a2e0778efebf10a88b02dd4d1e226}{l3mf\+Helper\+::get\+Mesh\+Objs\+From3mf\+Model}} (Lib3\+M\+F\+::\+P\+Model model)
+\begin{DoxyCompactList}\small\item\em Get all mesh objects from the 3mf model object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+helper for reading of 3mf files 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/08-\/24
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{l3mfHelper_8hpp_a8d5a2e0778efebf10a88b02dd4d1e226}\label{l3mfHelper_8hpp_a8d5a2e0778efebf10a88b02dd4d1e226}} 
+\index{l3mfHelper.hpp@{l3mfHelper.hpp}!getMeshObjsFrom3mfModel@{getMeshObjsFrom3mfModel}}
+\index{getMeshObjsFrom3mfModel@{getMeshObjsFrom3mfModel}!l3mfHelper.hpp@{l3mfHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{getMeshObjsFrom3mfModel()}{getMeshObjsFrom3mfModel()}}
+{\footnotesize\ttfamily std\+::vector$<$Lib3\+M\+F\+::\+P\+Mesh\+Object$>$ l3mf\+Helper\+::get\+Mesh\+Objs\+From3mf\+Model (\begin{DoxyParamCaption}\item[{Lib3\+M\+F\+::\+P\+Model}]{model }\end{DoxyParamCaption})}
+
+
+
+Get all mesh objects from the 3mf model object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Lib3\+M\+F\+::\+P\+Mesh\+Object$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{l3mfHelper_8hpp_a928148a0823aba0e14b41cfdc844da8f}\label{l3mfHelper_8hpp_a928148a0823aba0e14b41cfdc844da8f}} 
+\index{l3mfHelper.hpp@{l3mfHelper.hpp}!print3mfVersion@{print3mfVersion}}
+\index{print3mfVersion@{print3mfVersion}!l3mfHelper.hpp@{l3mfHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{print3mfVersion()}{print3mfVersion()}}
+{\footnotesize\ttfamily void l3mf\+Helper\+::print3mf\+Version (\begin{DoxyParamCaption}\item[{Lib3\+M\+F\+::\+P\+Wrapper}]{wrapper }\end{DoxyParamCaption})}
+
+
+
+print the version of lib3mf 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wrapper} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{l3mfHelper_8hpp_a0061f3ea45b784b083b932b34cfa73d0}\label{l3mfHelper_8hpp_a0061f3ea45b784b083b932b34cfa73d0}} 
+\index{l3mfHelper.hpp@{l3mfHelper.hpp}!printReaderWarnings@{printReaderWarnings}}
+\index{printReaderWarnings@{printReaderWarnings}!l3mfHelper.hpp@{l3mfHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{printReaderWarnings()}{printReaderWarnings()}}
+{\footnotesize\ttfamily void l3mf\+Helper\+::print\+Reader\+Warnings (\begin{DoxyParamCaption}\item[{Lib3\+M\+F\+::\+P\+Reader}]{reader }\end{DoxyParamCaption})}
+
+
+
+print warnings from the reader (after reading a file) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,184 @@
+\hypertarget{workflows_8hpp}{}\doxysection{inc/workflows.hpp File Reference}
+\label{workflows_8hpp}\index{inc/workflows.hpp@{inc/workflows.hpp}}
+
+
+the whole top level optimization workflows and data structures  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Smart\+Pointer.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}V\+H\+A\+C\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mesh\+With\+Attributes.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}open\+G\+A.\+hpp\char`\"{}}\newline
+Include dependency graph for workflows.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{workflows_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{workflows_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsCostWeights}{s\+Cost\+Weights}}
+\begin{DoxyCompactList}\small\item\em the weigths for the optimization \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsPartCosts}{s\+Part\+Costs}}
+\begin{DoxyCompactList}\small\item\em the costs of a decomposition \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structMySolution}{My\+Solution}}
+\begin{DoxyCompactList}\small\item\em a solution set / species for the ga \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structMyMiddleCost}{My\+Middle\+Cost}}
+\begin{DoxyCompactList}\small\item\em the middle cost of a solution \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOptimizationSettings}{Optimization\+Settings}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{workflows_8hpp_a91adfd3057d0376732c7f1a8daf51e01}\label{workflows_8hpp_a91adfd3057d0376732c7f1a8daf51e01}} 
+typedef E\+A\+::\+Genetic$<$ \mbox{\hyperlink{structMySolution}{My\+Solution}}, \mbox{\hyperlink{structMyMiddleCost}{My\+Middle\+Cost}} $>$ {\bfseries G\+A\+\_\+\+Type}
+\item 
+\mbox{\Hypertarget{workflows_8hpp_a0f60ab815741de33134c3e3a8d46dc02}\label{workflows_8hpp_a0f60ab815741de33134c3e3a8d46dc02}} 
+typedef E\+A\+::\+Generation\+Type$<$ \mbox{\hyperlink{structMySolution}{My\+Solution}}, \mbox{\hyperlink{structMyMiddleCost}{My\+Middle\+Cost}} $>$ {\bfseries Generation\+\_\+\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{workflows_8hpp_ac328abc6b08440ef375861d6083c2a52}{calculate\+Cost}} (\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes}} $\ast$meshwa, \mbox{\hyperlink{structsCostWeights}{s\+Cost\+Weights}} costs)
+\begin{DoxyCompactList}\small\item\em calculate the costs for a single object \end{DoxyCompactList}\item 
+V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters \mbox{\hyperlink{workflows_8hpp_a54efb11e3b91aa5cfadf304278066e00}{optimize\+GA}} (\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes}} meshwa)
+\begin{DoxyCompactList}\small\item\em optimize a decomposition using an ga with some default settings \end{DoxyCompactList}\item 
+V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters \mbox{\hyperlink{workflows_8hpp_ad6da65d8f49f9414877360b3c2141aac}{optimize\+GA}} (\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes}} meshwa, \mbox{\hyperlink{structOptimizationSettings}{Optimization\+Settings}} opt\+Settings, \mbox{\hyperlink{structMyMiddleCost}{My\+Middle\+Cost}} $\ast$ptr\+Mid\+Cost=nullptr)
+\begin{DoxyCompactList}\small\item\em optimize the decomposition of a mesh \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{workflows_8hpp_a810d46009be4b9d543224bc89907893d}{split\+Meshwa\+And\+Save2\+File}} (\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes}} $\ast$meshwa, V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters params, const std\+::string \&path=\char`\"{}/home/louis/C\+AD/debug\+GA/\char`\"{}, const std\+::string \&res\+Prefix=\char`\"{}result\char`\"{}, const std\+::string \&hull\+Prefix=\char`\"{}hull\+Result\char`\"{}, My\+Middle\+Cost $\ast$this\+Cost=nullptr)
+\begin{DoxyCompactList}\small\item\em split object using the given params, then store the results \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+the whole top level optimization workflows and data structures 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/08-\/29
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{workflows_8hpp_ac328abc6b08440ef375861d6083c2a52}\label{workflows_8hpp_ac328abc6b08440ef375861d6083c2a52}} 
+\index{workflows.hpp@{workflows.hpp}!calculateCost@{calculateCost}}
+\index{calculateCost@{calculateCost}!workflows.hpp@{workflows.hpp}}
+\doxysubsubsection{\texorpdfstring{calculateCost()}{calculateCost()}}
+{\footnotesize\ttfamily double calculate\+Cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes}} $\ast$}]{meshwa,  }\item[{\mbox{\hyperlink{structsCostWeights}{s\+Cost\+Weights}}}]{costs }\end{DoxyParamCaption})}
+
+
+
+calculate the costs for a single object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meshwa} & the object \\
+\hline
+{\em costs} & the weights \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double the cost 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file workflows.\+cpp.
+
+\mbox{\Hypertarget{workflows_8hpp_a54efb11e3b91aa5cfadf304278066e00}\label{workflows_8hpp_a54efb11e3b91aa5cfadf304278066e00}} 
+\index{workflows.hpp@{workflows.hpp}!optimizeGA@{optimizeGA}}
+\index{optimizeGA@{optimizeGA}!workflows.hpp@{workflows.hpp}}
+\doxysubsubsection{\texorpdfstring{optimizeGA()}{optimizeGA()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters optimize\+GA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes}}}]{meshwa }\end{DoxyParamCaption})}
+
+
+
+optimize a decomposition using an ga with some default settings 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meshwa} & the mesh for which to find the best v-\/hacd params \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters the v-\/hacd params of the best solution 
+\end{DoxyReturn}
+
+
+Definition at line 362 of file workflows.\+cpp.
+
+\mbox{\Hypertarget{workflows_8hpp_ad6da65d8f49f9414877360b3c2141aac}\label{workflows_8hpp_ad6da65d8f49f9414877360b3c2141aac}} 
+\index{workflows.hpp@{workflows.hpp}!optimizeGA@{optimizeGA}}
+\index{optimizeGA@{optimizeGA}!workflows.hpp@{workflows.hpp}}
+\doxysubsubsection{\texorpdfstring{optimizeGA()}{optimizeGA()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters optimize\+GA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{poly\+Quality\+Measures\+::\+Mesh\+With\+Attributes}}}]{meshwa,  }\item[{\mbox{\hyperlink{structOptimizationSettings}{Optimization\+Settings}}}]{opt\+Settings,  }\item[{\mbox{\hyperlink{structMyMiddleCost}{My\+Middle\+Cost}} $\ast$}]{ptr\+Mid\+Cost = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+optimize the decomposition of a mesh 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meshwa} & the mesh to decompose \\
+\hline
+{\em opt\+Settings} & settings for the opt algo (GA) \\
+\hline
+{\em ptr\+Mid\+Cost} & returns the middle cost of the best result if nullptr -\/$>$ ignored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters the best v-\/hacd parameters 
+\end{DoxyReturn}
+
+
+Definition at line 468 of file workflows.\+cpp.
+
+\mbox{\Hypertarget{workflows_8hpp_a810d46009be4b9d543224bc89907893d}\label{workflows_8hpp_a810d46009be4b9d543224bc89907893d}} 
+\index{workflows.hpp@{workflows.hpp}!splitMeshwaAndSave2File@{splitMeshwaAndSave2File}}
+\index{splitMeshwaAndSave2File@{splitMeshwaAndSave2File}!workflows.hpp@{workflows.hpp}}
+\doxysubsubsection{\texorpdfstring{splitMeshwaAndSave2File()}{splitMeshwaAndSave2File()}}
+{\footnotesize\ttfamily void split\+Meshwa\+And\+Save2\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpolyQualityMeasures_1_1MeshWithAttributes}{Mesh\+With\+Attributes}} $\ast$}]{meshwa,  }\item[{V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Parameters}]{params,  }\item[{const std\+::string \&}]{path,  }\item[{const std\+::string \&}]{res\+Prefix,  }\item[{const std\+::string \&}]{hull\+Prefix,  }\item[{\mbox{\hyperlink{structMyMiddleCost}{My\+Middle\+Cost}} $\ast$}]{this\+Cost }\end{DoxyParamCaption})}
+
+
+
+split object using the given params, then store the results 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meshwa} & the mesh to decompose \\
+\hline
+{\em params} & the params to use \\
+\hline
+{\em path} & the output path \\
+\hline
+{\em res\+Prefix} & the resulting files prefix \\
+\hline
+{\em hull\+Prefix} & the resulting convex hulls prefix \\
+\hline
+{\em this\+Cost} & the cost values to store to the result folder \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 568 of file workflows.\+cpp.
+

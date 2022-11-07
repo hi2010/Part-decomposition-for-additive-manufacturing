@@ -1,0 +1,665 @@
+\hypertarget{lVtkHelper_8hpp}{}\doxysection{inc/l\+Vtk\+Helper.hpp File Reference}
+\label{lVtkHelper_8hpp}\index{inc/lVtkHelper.hpp@{inc/lVtkHelper.hpp}}
+
+
+helper functions to convert triangle data form lib3mf to vtk polydata. Also lateron prbly \char`\"{}pure\char`\"{} vtk helpers !!! This does not use the efficient template like programming style mentioned in \href{https://vtk.org/Wiki/VTK/Tutorials/DataArrays}{\texttt{ https\+://vtk.\+org/\+Wiki/\+V\+T\+K/\+Tutorials/\+Data\+Arrays}} !!! -\/$>$ only double gets used  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include \char`\"{}lib3mf\+\_\+implicit.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Cell.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Type.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Points.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Triangle.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Vector.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Data\+Object.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Smart\+Pointer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Plane\+Collection.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Transform.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Matrix4x4.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}V\+H\+A\+C\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types\+Constants\+Definition.\+hpp\char`\"{}}\newline
+Include dependency graph for l\+Vtk\+Helper.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lVtkHelper_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lVtkHelper_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{lVtkHelper_8hpp_ae6d30790817c26ec7374815a15ca8d0f}\label{lVtkHelper_8hpp_ae6d30790817c26ec7374815a15ca8d0f}} 
+typedef double {\bfseries l\+Vtk\+Helper\+::\+V\+H\+A\+C\+D\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+PE}
+\item 
+\mbox{\Hypertarget{lVtkHelper_8hpp_a8398e3b8b109df5aaa3883d8506480fa}\label{lVtkHelper_8hpp_a8398e3b8b109df5aaa3883d8506480fa}} 
+typedef uint32\+\_\+t {\bfseries l\+Vtk\+Helper\+::\+V\+H\+A\+C\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ {\bfseries l\+Vtk\+Helper\+::convert\+Mshs2vtk\+Polydata} (std\+::vector$<$ Lib3\+M\+F\+::\+P\+Mesh\+Object $>$ v\+Msh\+Objs)
+\begin{DoxyCompactList}\small\item\em convert 3mf mesh object to vtk poly data mesh object (3mf)verts = points(vtk) \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ {\bfseries l\+Vtk\+Helper\+::get\+Clean\+Polydata} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ polydata, float tolerance=0.\+0)
+\begin{DoxyCompactList}\small\item\em Get the Clean Polydata object / apply vtk\+Clean\+Polydata. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lVtkHelper_8cpp_a73685f8f9a90ae7c2974e9a39d54264d}\label{lVtkHelper_8cpp_a73685f8f9a90ae7c2974e9a39d54264d}} 
+void {\bfseries l\+Vtk\+Helper\+::calcualte\+Cell\+Normals\+In\+Place} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ polydata, int feature\+Angle)
+\item 
+void {\bfseries l\+Vtk\+Helper\+::convert\+Vtk\+Poly\+Data\+To\+Flat\+Vectors} (vtk\+Poly\+Data $\ast$poly, std\+::vector$<$ V\+H\+A\+C\+D\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+PE $>$ \&v\+Points, std\+::vector$<$ V\+H\+A\+C\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE $>$ \&v\+Triangles)
+\begin{DoxyCompactList}\small\item\em inserts the points and triangle idxs from polydata into the vectors (push\+\_\+back) used vectors as input instead of a struct as this allows to add mutliple data to the vectors and the advantage of a struct is in this case not huge if at all (organisation wise ... for me) \end{DoxyCompactList}\item 
+void {\bfseries l\+Vtk\+Helper\+::convert\+L3\+M\+F\+Vec\+Mesh\+Objs\+To\+Flat\+Vectors} (std\+::vector$<$ Lib3\+M\+F\+::\+P\+Mesh\+Object $>$ v\+Msh\+Objs, std\+::vector$<$ V\+H\+A\+C\+D\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+PE $>$ \&v\+Points, std\+::vector$<$ V\+H\+A\+C\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE $>$ \&v\+Triangles)
+\begin{DoxyCompactList}\small\item\em inserts the points and triangle idxs from Lib3\+M\+F\+::\+P\+Mesh\+Object into the vectors (push\+\_\+back) This method should be in another file as this files name is missleading \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ {\bfseries l\+Vtk\+Helper\+::convert\+V\+H\+A\+C\+D\+C\+H2\+Polydata} (V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Convex\+Hull ch, bool \&successfull)
+\begin{DoxyCompactList}\small\item\em converts a vhacd convex hull to poly data. If the hull is empty successfull gets assigned false, else true \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{lVtkHelper_8hpp_a357804f8972ad6899d662b44531bae36}{l\+Vtk\+Helper\+::convert\+V\+H\+A\+C\+D\+C\+H2\+Polydata}} (V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Convex\+Hull ch)
+\begin{DoxyCompactList}\small\item\em converts a vhacd convex hull to poly data. If the hull is empty successfull gets assigned false, else true \end{DoxyCompactList}\item 
+void {\bfseries l\+Vtk\+Helper\+::write\+Vtk\+To\+Obj} (vtk\+Data\+Object $\ast$obj, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em store vtk\+Poly\+Data object as obj file \end{DoxyCompactList}\item 
+void {\bfseries l\+Vtk\+Helper\+::write\+Vtk\+To\+Vtk} (vtk\+Data\+Object $\ast$obj, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em store vtk\+Poly\+Data object as vtk file \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{lVtkHelper_8hpp_a90bedd9e5b2d8cf39a8521e7c857f92b}{l\+Vtk\+Helper\+::cos\+Angle\+Norm\+Vectors}} (vtk\+Vector3d v0, vtk\+Vector3d v1)
+\begin{DoxyCompactList}\small\item\em calculates the cos(angle) for the given vectors (dot product) \char`\"{}angle between\char`\"{} calculate the cos angle of normalized vectors (dot porduct) \mbox{[}0,1\mbox{]} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{lVtkHelper_8hpp_a7a6983c7e2dfbe127cd6888f68579552}{l\+Vtk\+Helper\+::angle\+Norm\+Vectors}} (vtk\+Vector3d v0, vtk\+Vector3d v1)
+\begin{DoxyCompactList}\small\item\em calcualte the angle between two normalized vectors in rad \mbox{[}0, pi\mbox{]} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\vtk\+Vector3$<$ T $>$ \mbox{\hyperlink{lVtkHelper_8hpp_ade0e609552d3b058b4df045a2bbf98ae}{l\+Vtk\+Helper\+::invert\+Vector}} (vtk\+Vector3$<$ T $>$ vec)
+\begin{DoxyCompactList}\small\item\em multiply vector by -\/1 (inverting the direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lVtkHelper_8hpp_a333c187f572e30f6df4932ff202a0dd0}\label{lVtkHelper_8hpp_a333c187f572e30f6df4932ff202a0dd0}} 
+double {\bfseries l\+Vtk\+Helper\+::compute\+Tri\+Area} (vtk\+Points $\ast$pts)
+\item 
+double \mbox{\hyperlink{lVtkHelper_8hpp_ab7b8a4366326edb9c11dacdb462292f8}{l\+Vtk\+Helper\+::compute\+Tri\+Area}} (vtk\+Cell $\ast$cell)
+\begin{DoxyCompactList}\small\item\em compute the area of a triangle \end{DoxyCompactList}\item 
+void {\bfseries l\+Vtk\+Helper\+::get\+Greatest\+Mesh\+Cell\+And\+Size} (vtk\+Poly\+Data $\ast$poly, vtk\+Id\+Type \&id, double \&size)
+\begin{DoxyCompactList}\small\item\em get the id of the greatest cell (tri) and the size \end{DoxyCompactList}\item 
+double {\bfseries l\+Vtk\+Helper\+::append\+Cell\+Areas\+Array\+Ip} (vtk\+Poly\+Data $\ast$poly, const char $\ast$new\+Arr\+Name=T\+R\+I\+\_\+\+A\+R\+E\+A\+\_\+\+A\+R\+R\+\_\+\+N\+A\+ME)
+\begin{DoxyCompactList}\small\item\em add an array containing the triangle areas to the polydata, returns the sum of all areas works inplace (adds to poly) \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ {\bfseries l\+Vtk\+Helper\+::append\+Cell\+Centers} (vtk\+Poly\+Data $\ast$poly)
+\begin{DoxyCompactList}\small\item\em add an array containing the triangle areas to a copy of the polydata, does not work inplace, returns the data with the appended array \end{DoxyCompactList}\item 
+void {\bfseries l\+Vtk\+Helper\+::convert\+Cell\+Data2\+Point\+Data\+Ip} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly, const char $\ast$cell\+Array\+Name, const char $\ast$point\+Array\+Name)
+\begin{DoxyCompactList}\small\item\em create a polydata point data array and assign the value of the cell it belongs to (the value will be the one from the last cell that it belongs to as a point belongs to 3 tris) \end{DoxyCompactList}\item 
+void {\bfseries l\+Vtk\+Helper\+::update\+Cell\+Data\+With\+Point\+Data\+Ip} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly, const char $\ast$cell\+Array\+Name, const char $\ast$point\+Array\+Name)
+\begin{DoxyCompactList}\small\item\em update polydata cell data from a point data array by assigning the value of the point to the tri it belongs to, the value of the last point which belongs / is checked will be kept for the cell \end{DoxyCompactList}\item 
+void {\bfseries l\+Vtk\+Helper\+::filter\+Plane\+Col4\+Cut} (vtk\+Data\+Array $\ast$pts, vtk\+Smart\+Pointer$<$ vtk\+Plane\+Collection $>$ planc, vtk\+Smart\+Pointer$<$ vtk\+Plane\+Collection $>$ new\+Planc)
+\begin{DoxyCompactList}\small\item\em reduce the number of cutting planes by removing cutting planes that are at least nearly the same, by some small error margin \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ {\bfseries l\+Vtk\+Helper\+::clip\+Closed\+Keep\+Cell\+Labels} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly, vtk\+Smart\+Pointer$<$ vtk\+Plane\+Collection $>$ plane\+Col)
+\begin{DoxyCompactList}\small\item\em clip closed surface and add an array called Parent\+Cell\+Id to identify to which cell a cell belonged before the cut, then set labels to 1 if they were 1 before the cut (a cutting interface) \end{DoxyCompactList}\item 
+double {\bfseries l\+Vtk\+Helper\+::get\+Align\+Bbxs\+Angle} (vtk\+Bounding\+Box printer\+Bbx, vtk\+Bounding\+Box part\+Bbx)
+\begin{DoxyCompactList}\small\item\em check how the longest side of the printer bbx aligns with the longes side of the part\+Bbx / if a rotation by 90 deg is needed \end{DoxyCompactList}\item 
+std\+::string {\bfseries l\+Vtk\+Helper\+::get\+String\+Fromvtk4x4\+Matrix\+Values} (double vals\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em create a 4x4 csv matrix from the array of size 16 representing a 4x4 matrix. \char`\"{},\char`\"{}\+: number separation / column, \char`\"{};\textbackslash{}n\char`\"{}\+: line separation / row \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{lVtkHelper_8hpp_a6d2342943087e64ea7443af57d409c97}{l\+Vtk\+Helper\+::get\+String\+Fromvtk4x4\+Matrix\+Values}} (vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ transf)
+\begin{DoxyCompactList}\small\item\em create a 4x4 csv matrix from the vtk\+Transform representing a 4x4 matrix. \char`\"{},\char`\"{}\+: number separation / column, \char`\"{};\textbackslash{}n\char`\"{}\+: line separation / row \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{lVtkHelper_8hpp_a7befdb1c9a610f2638ef43886b8e3db1}{l\+Vtk\+Helper\+::print\+String\+Fromvtk4x4\+Matrix\+Values}} (vtk\+Smart\+Pointer$<$ vtk\+Transform $>$ transf)
+\begin{DoxyCompactList}\small\item\em print a 4x4 csv matrix from the vtk\+Transform representing a 4x4 matrix. \char`\"{},\char`\"{}\+: number separation / column, \char`\"{};\textbackslash{}n\char`\"{}\+: line separation / row \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+helper functions to convert triangle data form lib3mf to vtk polydata. Also lateron prbly \char`\"{}pure\char`\"{} vtk helpers !!! This does not use the efficient template like programming style mentioned in \href{https://vtk.org/Wiki/VTK/Tutorials/DataArrays}{\texttt{ https\+://vtk.\+org/\+Wiki/\+V\+T\+K/\+Tutorials/\+Data\+Arrays}} !!! -\/$>$ only double gets used 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lVtkHelper_8hpp_a7a6983c7e2dfbe127cd6888f68579552}\label{lVtkHelper_8hpp_a7a6983c7e2dfbe127cd6888f68579552}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!angleNormVectors@{angleNormVectors}}
+\index{angleNormVectors@{angleNormVectors}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{angleNormVectors()}{angleNormVectors()}}
+{\footnotesize\ttfamily double l\+Vtk\+Helper\+::angle\+Norm\+Vectors (\begin{DoxyParamCaption}\item[{vtk\+Vector3d}]{v0,  }\item[{vtk\+Vector3d}]{v1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calcualte the angle between two normalized vectors in rad \mbox{[}0, pi\mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v0} & \\
+\hline
+{\em v1} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file l\+Vtk\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_a83b78e714403ea5f11d4b3817e3f2388}\label{lVtkHelper_8cpp_a83b78e714403ea5f11d4b3817e3f2388}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!appendCellAreasArrayIp@{appendCellAreasArrayIp}}
+\index{appendCellAreasArrayIp@{appendCellAreasArrayIp}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{appendCellAreasArrayIp()}{appendCellAreasArrayIp()}}
+{\footnotesize\ttfamily double l\+Vtk\+Helper\+::append\+Cell\+Areas\+Array\+Ip (\begin{DoxyParamCaption}\item[{vtk\+Poly\+Data $\ast$}]{poly,  }\item[{const char $\ast$}]{new\+Arr\+Name = {\ttfamily TRI\+\_\+AREA\+\_\+ARR\+\_\+NAME} }\end{DoxyParamCaption})}
+
+
+
+add an array containing the triangle areas to the polydata, returns the sum of all areas works inplace (adds to poly) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & \\
+\hline
+{\em new\+Arr\+Name} & name of the array that gets added to the polydata \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double the sum of all areas 
+\end{DoxyReturn}
+
+
+Definition at line 229 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_a6b1c7fa39914a5dfa17a641ea3672d07}\label{lVtkHelper_8cpp_a6b1c7fa39914a5dfa17a641ea3672d07}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!appendCellCenters@{appendCellCenters}}
+\index{appendCellCenters@{appendCellCenters}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{appendCellCenters()}{appendCellCenters()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ l\+Vtk\+Helper\+::append\+Cell\+Centers (\begin{DoxyParamCaption}\item[{vtk\+Poly\+Data $\ast$}]{poly }\end{DoxyParamCaption})}
+
+
+
+add an array containing the triangle areas to a copy of the polydata, does not work inplace, returns the data with the appended array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 259 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_af9edca83ea34b488a4addcdae3c7462d}\label{lVtkHelper_8cpp_af9edca83ea34b488a4addcdae3c7462d}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!clipClosedKeepCellLabels@{clipClosedKeepCellLabels}}
+\index{clipClosedKeepCellLabels@{clipClosedKeepCellLabels}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{clipClosedKeepCellLabels()}{clipClosedKeepCellLabels()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ l\+Vtk\+Helper\+::clip\+Closed\+Keep\+Cell\+Labels (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{poly,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Plane\+Collection $>$}]{plane\+Col }\end{DoxyParamCaption})}
+
+
+
+clip closed surface and add an array called Parent\+Cell\+Id to identify to which cell a cell belonged before the cut, then set labels to 1 if they were 1 before the cut (a cutting interface) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & \\
+\hline
+{\em plane\+Col} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 358 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8hpp_ab7b8a4366326edb9c11dacdb462292f8}\label{lVtkHelper_8hpp_ab7b8a4366326edb9c11dacdb462292f8}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!computeTriArea@{computeTriArea}}
+\index{computeTriArea@{computeTriArea}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{computeTriArea()}{computeTriArea()}}
+{\footnotesize\ttfamily double l\+Vtk\+Helper\+::compute\+Tri\+Area (\begin{DoxyParamCaption}\item[{vtk\+Cell $\ast$}]{cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+compute the area of a triangle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 168 of file l\+Vtk\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_a0564be1a9eb311880759e7715ea9866f}\label{lVtkHelper_8cpp_a0564be1a9eb311880759e7715ea9866f}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!convertCellData2PointDataIp@{convertCellData2PointDataIp}}
+\index{convertCellData2PointDataIp@{convertCellData2PointDataIp}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{convertCellData2PointDataIp()}{convertCellData2PointDataIp()}}
+{\footnotesize\ttfamily void l\+Vtk\+Helper\+::convert\+Cell\+Data2\+Point\+Data\+Ip (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{poly,  }\item[{const char $\ast$}]{cell\+Array\+Name,  }\item[{const char $\ast$}]{point\+Array\+Name }\end{DoxyParamCaption})}
+
+
+
+create a polydata point data array and assign the value of the cell it belongs to (the value will be the one from the last cell that it belongs to as a point belongs to 3 tris) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & \\
+\hline
+{\em cell\+Array\+Name} & \\
+\hline
+{\em point\+Array\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 268 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_ac4a858cdc4b696fbbde8befda4cd8e92}\label{lVtkHelper_8cpp_ac4a858cdc4b696fbbde8befda4cd8e92}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!convertL3MFVecMeshObjsToFlatVectors@{convertL3MFVecMeshObjsToFlatVectors}}
+\index{convertL3MFVecMeshObjsToFlatVectors@{convertL3MFVecMeshObjsToFlatVectors}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{convertL3MFVecMeshObjsToFlatVectors()}{convertL3MFVecMeshObjsToFlatVectors()}}
+{\footnotesize\ttfamily void l\+Vtk\+Helper\+::convert\+L3\+M\+F\+Vec\+Mesh\+Objs\+To\+Flat\+Vectors (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Lib3\+M\+F\+::\+P\+Mesh\+Object $>$}]{v\+Msh\+Objs,  }\item[{std\+::vector$<$ V\+H\+A\+C\+D\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+PE $>$ \&}]{v\+Points,  }\item[{std\+::vector$<$ V\+H\+A\+C\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE $>$ \&}]{v\+Triangles }\end{DoxyParamCaption})}
+
+
+
+inserts the points and triangle idxs from Lib3\+M\+F\+::\+P\+Mesh\+Object into the vectors (push\+\_\+back) This method should be in another file as this files name is missleading 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v\+Msh\+Objs} & input vector of P\+Mesh\+Objects \\
+\hline
+\mbox{\texttt{ out}}  & {\em v\+Points} & output(inout) vector of points \{x, y, z, x, y, z, ...\} of type V\+H\+A\+C\+D\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+PE (prbly. double) \\
+\hline
+\mbox{\texttt{ out}}  & {\em v\+Triangles} & output(inout) vector of triangle data (idxs) \{idx\+V0, idx\+V1, idx\+V2, ...\} of type V\+H\+A\+C\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE (prbly. uint32\+\_\+t) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 135 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_ad843e431a376e0ca7f51849c16b8fdb0}\label{lVtkHelper_8cpp_ad843e431a376e0ca7f51849c16b8fdb0}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!convertMshs2vtkPolydata@{convertMshs2vtkPolydata}}
+\index{convertMshs2vtkPolydata@{convertMshs2vtkPolydata}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{convertMshs2vtkPolydata()}{convertMshs2vtkPolydata()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ l\+Vtk\+Helper\+::convert\+Mshs2vtk\+Polydata (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Lib3\+M\+F\+::\+P\+Mesh\+Object $>$}]{v\+Msh\+Objs }\end{DoxyParamCaption})}
+
+
+
+convert 3mf mesh object to vtk poly data mesh object (3mf)verts = points(vtk) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+Msh\+Objs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8hpp_a357804f8972ad6899d662b44531bae36}\label{lVtkHelper_8hpp_a357804f8972ad6899d662b44531bae36}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!convertVHACDCH2Polydata@{convertVHACDCH2Polydata}}
+\index{convertVHACDCH2Polydata@{convertVHACDCH2Polydata}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{convertVHACDCH2Polydata()}{convertVHACDCH2Polydata()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ l\+Vtk\+Helper\+::convert\+V\+H\+A\+C\+D\+C\+H2\+Polydata (\begin{DoxyParamCaption}\item[{V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Convex\+Hull}]{ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+converts a vhacd convex hull to poly data. If the hull is empty successfull gets assigned false, else true 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file l\+Vtk\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_ac03b705c77f66167be9de86502583525}\label{lVtkHelper_8cpp_ac03b705c77f66167be9de86502583525}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!convertVHACDCH2Polydata@{convertVHACDCH2Polydata}}
+\index{convertVHACDCH2Polydata@{convertVHACDCH2Polydata}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{convertVHACDCH2Polydata()}{convertVHACDCH2Polydata()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ l\+Vtk\+Helper\+::convert\+V\+H\+A\+C\+D\+C\+H2\+Polydata (\begin{DoxyParamCaption}\item[{V\+H\+A\+C\+D\+::\+I\+V\+H\+A\+C\+D\+::\+Convex\+Hull}]{ch,  }\item[{bool \&}]{successfull }\end{DoxyParamCaption})}
+
+
+
+converts a vhacd convex hull to poly data. If the hull is empty successfull gets assigned false, else true 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & \\
+\hline
+{\em successfull} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 161 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_acba14fc840517277fa6761e699d063ef}\label{lVtkHelper_8cpp_acba14fc840517277fa6761e699d063ef}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!convertVtkPolyDataToFlatVectors@{convertVtkPolyDataToFlatVectors}}
+\index{convertVtkPolyDataToFlatVectors@{convertVtkPolyDataToFlatVectors}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{convertVtkPolyDataToFlatVectors()}{convertVtkPolyDataToFlatVectors()}}
+{\footnotesize\ttfamily void l\+Vtk\+Helper\+::convert\+Vtk\+Poly\+Data\+To\+Flat\+Vectors (\begin{DoxyParamCaption}\item[{vtk\+Poly\+Data $\ast$}]{poly,  }\item[{std\+::vector$<$ V\+H\+A\+C\+D\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+PE $>$ \&}]{v\+Points,  }\item[{std\+::vector$<$ V\+H\+A\+C\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE $>$ \&}]{v\+Triangles }\end{DoxyParamCaption})}
+
+
+
+inserts the points and triangle idxs from polydata into the vectors (push\+\_\+back) used vectors as input instead of a struct as this allows to add mutliple data to the vectors and the advantage of a struct is in this case not huge if at all (organisation wise ... for me) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em poly} & input poly data from which to get the points and tri conneciton data \\
+\hline
+\mbox{\texttt{ out}}  & {\em points} & output(inout) vector of points \{x, y, z, x, y, z, ...\} of type V\+H\+A\+C\+D\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+PE (prbly. double) \\
+\hline
+\mbox{\texttt{ out}}  & {\em triangles} & output(inout) vector of triangle data (idxs) \{idx\+V0, idx\+V1, idx\+V2, ...\} of type V\+H\+A\+C\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE (prbly. uint32\+\_\+t) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 108 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8hpp_a90bedd9e5b2d8cf39a8521e7c857f92b}\label{lVtkHelper_8hpp_a90bedd9e5b2d8cf39a8521e7c857f92b}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!cosAngleNormVectors@{cosAngleNormVectors}}
+\index{cosAngleNormVectors@{cosAngleNormVectors}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{cosAngleNormVectors()}{cosAngleNormVectors()}}
+{\footnotesize\ttfamily double l\+Vtk\+Helper\+::cos\+Angle\+Norm\+Vectors (\begin{DoxyParamCaption}\item[{vtk\+Vector3d}]{v0,  }\item[{vtk\+Vector3d}]{v1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculates the cos(angle) for the given vectors (dot product) \char`\"{}angle between\char`\"{} calculate the cos angle of normalized vectors (dot porduct) \mbox{[}0,1\mbox{]} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v0} & vector 0 (assumption\+: is normalized) \\
+\hline
+{\em v1} & vector 1 (assumption\+: is normalized) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double the cosine of the angle between the vectors range\+: \mbox{[}-\/1, 1\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 123 of file l\+Vtk\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_ae93f0c75029e69ba1d28feb7735aa878}\label{lVtkHelper_8cpp_ae93f0c75029e69ba1d28feb7735aa878}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!filterPlaneCol4Cut@{filterPlaneCol4Cut}}
+\index{filterPlaneCol4Cut@{filterPlaneCol4Cut}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{filterPlaneCol4Cut()}{filterPlaneCol4Cut()}}
+{\footnotesize\ttfamily void l\+Vtk\+Helper\+::filter\+Plane\+Col4\+Cut (\begin{DoxyParamCaption}\item[{vtk\+Data\+Array $\ast$}]{pts,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Plane\+Collection $>$}]{planc,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Plane\+Collection $>$}]{new\+Planc }\end{DoxyParamCaption})}
+
+
+
+reduce the number of cutting planes by removing cutting planes that are at least nearly the same, by some small error margin 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & \\
+\hline
+{\em planc} & \\
+\hline
+{\em new\+Planc} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 347 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_ad85a17d41af46f8bdde929038f105a09}\label{lVtkHelper_8cpp_ad85a17d41af46f8bdde929038f105a09}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!getAlignBbxsAngle@{getAlignBbxsAngle}}
+\index{getAlignBbxsAngle@{getAlignBbxsAngle}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{getAlignBbxsAngle()}{getAlignBbxsAngle()}}
+{\footnotesize\ttfamily double l\+Vtk\+Helper\+::get\+Align\+Bbxs\+Angle (\begin{DoxyParamCaption}\item[{vtk\+Bounding\+Box}]{printer\+Bbx,  }\item[{vtk\+Bounding\+Box}]{part\+Bbx }\end{DoxyParamCaption})}
+
+
+
+check how the longest side of the printer bbx aligns with the longes side of the part\+Bbx / if a rotation by 90 deg is needed 
+
+return if a rotation (by 90°) will align the printer bbx\textquotesingle{}s longest side (x, y) with the part\+Bbx\textquotesingle{}s longest side (x, y)
+
+
+\begin{DoxyParams}{Parameters}
+{\em printer\+Bbx} & \\
+\hline
+{\em part\+Bbx} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the angle to align the bbxs (0 or 90 deg)
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em printer\+Bbx} & \\
+\hline
+{\em part\+Bbx} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double the angle (0°, 90°) 
+\end{DoxyReturn}
+
+
+Definition at line 415 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_ae5aaefc32d6f086eeecb09b18cc3bb8b}\label{lVtkHelper_8cpp_ae5aaefc32d6f086eeecb09b18cc3bb8b}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!getCleanPolydata@{getCleanPolydata}}
+\index{getCleanPolydata@{getCleanPolydata}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{getCleanPolydata()}{getCleanPolydata()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ l\+Vtk\+Helper\+::get\+Clean\+Polydata (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{polydata,  }\item[{float}]{tolerance = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+
+
+Get the Clean Polydata object / apply vtk\+Clean\+Polydata. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em polydata} & \\
+\hline
+{\em tolerance} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_adbd71359ca2b98ca2fe4bffe8c9430c0}\label{lVtkHelper_8cpp_adbd71359ca2b98ca2fe4bffe8c9430c0}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!getGreatestMeshCellAndSize@{getGreatestMeshCellAndSize}}
+\index{getGreatestMeshCellAndSize@{getGreatestMeshCellAndSize}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{getGreatestMeshCellAndSize()}{getGreatestMeshCellAndSize()}}
+{\footnotesize\ttfamily void l\+Vtk\+Helper\+::get\+Greatest\+Mesh\+Cell\+And\+Size (\begin{DoxyParamCaption}\item[{vtk\+Poly\+Data $\ast$}]{poly,  }\item[{vtk\+Id\+Type \&}]{id,  }\item[{double \&}]{size }\end{DoxyParamCaption})}
+
+
+
+get the id of the greatest cell (tri) and the size 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & \\
+\hline
+{\em id} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 206 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_a7f1ae53a2b0d4585a2a1c9f8d582a9b8}\label{lVtkHelper_8cpp_a7f1ae53a2b0d4585a2a1c9f8d582a9b8}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!getStringFromvtk4x4MatrixValues@{getStringFromvtk4x4MatrixValues}}
+\index{getStringFromvtk4x4MatrixValues@{getStringFromvtk4x4MatrixValues}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{getStringFromvtk4x4MatrixValues()}{getStringFromvtk4x4MatrixValues()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string l\+Vtk\+Helper\+::get\+String\+Fromvtk4x4\+Matrix\+Values (\begin{DoxyParamCaption}\item[{double}]{vals\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+create a 4x4 csv matrix from the array of size 16 representing a 4x4 matrix. \char`\"{},\char`\"{}\+: number separation / column, \char`\"{};\textbackslash{}n\char`\"{}\+: line separation / row 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vals} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 429 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8hpp_a6d2342943087e64ea7443af57d409c97}\label{lVtkHelper_8hpp_a6d2342943087e64ea7443af57d409c97}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!getStringFromvtk4x4MatrixValues@{getStringFromvtk4x4MatrixValues}}
+\index{getStringFromvtk4x4MatrixValues@{getStringFromvtk4x4MatrixValues}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{getStringFromvtk4x4MatrixValues()}{getStringFromvtk4x4MatrixValues()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string l\+Vtk\+Helper\+::get\+String\+Fromvtk4x4\+Matrix\+Values (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Transform $>$}]{transf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+create a 4x4 csv matrix from the vtk\+Transform representing a 4x4 matrix. \char`\"{},\char`\"{}\+: number separation / column, \char`\"{};\textbackslash{}n\char`\"{}\+: line separation / row 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transf} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 259 of file l\+Vtk\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lVtkHelper_8hpp_ade0e609552d3b058b4df045a2bbf98ae}\label{lVtkHelper_8hpp_ade0e609552d3b058b4df045a2bbf98ae}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!invertVector@{invertVector}}
+\index{invertVector@{invertVector}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{invertVector()}{invertVector()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+vtk\+Vector3$<$T$>$ l\+Vtk\+Helper\+::invert\+Vector (\begin{DoxyParamCaption}\item[{vtk\+Vector3$<$ T $>$}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+multiply vector by -\/1 (inverting the direction) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Vector3$<$\+T$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file l\+Vtk\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lVtkHelper_8hpp_a7befdb1c9a610f2638ef43886b8e3db1}\label{lVtkHelper_8hpp_a7befdb1c9a610f2638ef43886b8e3db1}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!printStringFromvtk4x4MatrixValues@{printStringFromvtk4x4MatrixValues}}
+\index{printStringFromvtk4x4MatrixValues@{printStringFromvtk4x4MatrixValues}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{printStringFromvtk4x4MatrixValues()}{printStringFromvtk4x4MatrixValues()}}
+{\footnotesize\ttfamily std\+::string l\+Vtk\+Helper\+::print\+String\+Fromvtk4x4\+Matrix\+Values (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Transform $>$}]{transf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+print a 4x4 csv matrix from the vtk\+Transform representing a 4x4 matrix. \char`\"{},\char`\"{}\+: number separation / column, \char`\"{};\textbackslash{}n\char`\"{}\+: line separation / row 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transf} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 273 of file l\+Vtk\+Helper.\+hpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_a5291bdfad5891cb105ffbde5735d690a}\label{lVtkHelper_8cpp_a5291bdfad5891cb105ffbde5735d690a}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!updateCellDataWithPointDataIp@{updateCellDataWithPointDataIp}}
+\index{updateCellDataWithPointDataIp@{updateCellDataWithPointDataIp}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{updateCellDataWithPointDataIp()}{updateCellDataWithPointDataIp()}}
+{\footnotesize\ttfamily void l\+Vtk\+Helper\+::update\+Cell\+Data\+With\+Point\+Data\+Ip (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{poly,  }\item[{const char $\ast$}]{cell\+Array\+Name,  }\item[{const char $\ast$}]{point\+Array\+Name }\end{DoxyParamCaption})}
+
+
+
+update polydata cell data from a point data array by assigning the value of the point to the tri it belongs to, the value of the last point which belongs / is checked will be kept for the cell 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & \\
+\hline
+{\em cell\+Array\+Name} & \\
+\hline
+{\em point\+Array\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 291 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_a6d4f0be5c43d74882cd8297c08acda1c}\label{lVtkHelper_8cpp_a6d4f0be5c43d74882cd8297c08acda1c}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!writeVtkToObj@{writeVtkToObj}}
+\index{writeVtkToObj@{writeVtkToObj}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{writeVtkToObj()}{writeVtkToObj()}}
+{\footnotesize\ttfamily void l\+Vtk\+Helper\+::write\+Vtk\+To\+Obj (\begin{DoxyParamCaption}\item[{vtk\+Data\+Object $\ast$}]{obj,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+store vtk\+Poly\+Data object as obj file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 190 of file l\+Vtk\+Helper.\+cpp.
+
+\mbox{\Hypertarget{lVtkHelper_8cpp_af12dcede04b6138cb786a851d281a10b}\label{lVtkHelper_8cpp_af12dcede04b6138cb786a851d281a10b}} 
+\index{lVtkHelper.hpp@{lVtkHelper.hpp}!writeVtkToVtk@{writeVtkToVtk}}
+\index{writeVtkToVtk@{writeVtkToVtk}!lVtkHelper.hpp@{lVtkHelper.hpp}}
+\doxysubsubsection{\texorpdfstring{writeVtkToVtk()}{writeVtkToVtk()}}
+{\footnotesize\ttfamily void l\+Vtk\+Helper\+::write\+Vtk\+To\+Vtk (\begin{DoxyParamCaption}\item[{vtk\+Data\+Object $\ast$}]{obj,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+store vtk\+Poly\+Data object as vtk file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 197 of file l\+Vtk\+Helper.\+cpp.
+

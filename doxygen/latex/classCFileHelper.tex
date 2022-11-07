@@ -1,0 +1,136 @@
+\hypertarget{classCFileHelper}{}\doxysection{C\+File\+Helper Class Reference}
+\label{classCFileHelper}\index{CFileHelper@{CFileHelper}}
+
+
+Collaboration diagram for C\+File\+Helper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classCFileHelper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{classCFileHelper_a1c56d0bfde85f6f0613a7c34291ef243}{load3mf\+Mesh\+As\+Vtk}} (std\+::string file\+Path)
+\begin{DoxyCompactList}\small\item\em load a 3mf mesh file to a vtk\+Poly\+Data object \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{classCFileHelper_a4c4a8f1864f2354be7892ec0ea962ee1}{try\+Clean\+And\+Repair\+Poly\+Data}} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly)
+\begin{DoxyCompactList}\small\item\em try to clean, repair triangle poly data and fill holes \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCFileHelper_afe92e8d0059e9dca30eb396ba88ede34}{check\+For\+Defects}} (vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly)
+\begin{DoxyCompactList}\small\item\em check how many defects get detected, Non\+Manifold, Boundary\+Edges, unconnected regions, ... \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{classCFileHelper_a1594932c0c901973460f0a93cb0b8b29}{load3mf\+Mesh\+As\+Vtk\+And\+Try\+Repair}} (std\+::string file\+Path, bool force\+Repair=false)
+\begin{DoxyCompactList}\small\item\em load 3mf mesh file to a vtk\+Poly\+Data object and try to fix mesh defects. Assumption\+: manifold closed structure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCFileHelper_a1b6a8e48ff34d355f9893fee4189cf78}\label{classCFileHelper_a1b6a8e48ff34d355f9893fee4189cf78}} 
+std\+::string {\bfseries last\+Fp}
+\item 
+\mbox{\Hypertarget{classCFileHelper_a6732923d535e3cf5e6db2375c76c463f}\label{classCFileHelper_a6732923d535e3cf5e6db2375c76c463f}} 
+Lib3\+M\+F\+::\+P\+Model {\bfseries last\+P\+Model}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 17 of file l\+File\+Helper.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCFileHelper_afe92e8d0059e9dca30eb396ba88ede34}\label{classCFileHelper_afe92e8d0059e9dca30eb396ba88ede34}} 
+\index{CFileHelper@{CFileHelper}!checkForDefects@{checkForDefects}}
+\index{checkForDefects@{checkForDefects}!CFileHelper@{CFileHelper}}
+\doxysubsubsection{\texorpdfstring{checkForDefects()}{checkForDefects()}}
+{\footnotesize\ttfamily int C\+File\+Helper\+::check\+For\+Defects (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{poly }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+check how many defects get detected, Non\+Manifold, Boundary\+Edges, unconnected regions, ... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int number of defect cells and edges 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file l\+File\+Helper.\+hpp.
+
+\mbox{\Hypertarget{classCFileHelper_a1c56d0bfde85f6f0613a7c34291ef243}\label{classCFileHelper_a1c56d0bfde85f6f0613a7c34291ef243}} 
+\index{CFileHelper@{CFileHelper}!load3mfMeshAsVtk@{load3mfMeshAsVtk}}
+\index{load3mfMeshAsVtk@{load3mfMeshAsVtk}!CFileHelper@{CFileHelper}}
+\doxysubsubsection{\texorpdfstring{load3mfMeshAsVtk()}{load3mfMeshAsVtk()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ C\+File\+Helper\+::load3mf\+Mesh\+As\+Vtk (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+load a 3mf mesh file to a vtk\+Poly\+Data object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file l\+File\+Helper.\+hpp.
+
+\mbox{\Hypertarget{classCFileHelper_a1594932c0c901973460f0a93cb0b8b29}\label{classCFileHelper_a1594932c0c901973460f0a93cb0b8b29}} 
+\index{CFileHelper@{CFileHelper}!load3mfMeshAsVtkAndTryRepair@{load3mfMeshAsVtkAndTryRepair}}
+\index{load3mfMeshAsVtkAndTryRepair@{load3mfMeshAsVtkAndTryRepair}!CFileHelper@{CFileHelper}}
+\doxysubsubsection{\texorpdfstring{load3mfMeshAsVtkAndTryRepair()}{load3mfMeshAsVtkAndTryRepair()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ C\+File\+Helper\+::load3mf\+Mesh\+As\+Vtk\+And\+Try\+Repair (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path,  }\item[{bool}]{force\+Repair = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+load 3mf mesh file to a vtk\+Poly\+Data object and try to fix mesh defects. Assumption\+: manifold closed structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \\
+\hline
+{\em force\+Repair} & try repairing even if no errors got detected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file l\+File\+Helper.\+hpp.
+
+\mbox{\Hypertarget{classCFileHelper_a4c4a8f1864f2354be7892ec0ea962ee1}\label{classCFileHelper_a4c4a8f1864f2354be7892ec0ea962ee1}} 
+\index{CFileHelper@{CFileHelper}!tryCleanAndRepairPolyData@{tryCleanAndRepairPolyData}}
+\index{tryCleanAndRepairPolyData@{tryCleanAndRepairPolyData}!CFileHelper@{CFileHelper}}
+\doxysubsubsection{\texorpdfstring{tryCleanAndRepairPolyData()}{tryCleanAndRepairPolyData()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ C\+File\+Helper\+::try\+Clean\+And\+Repair\+Poly\+Data (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{poly }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+try to clean, repair triangle poly data and fill holes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em poly} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vtk\+Smart\+Pointer$<$vtk\+Poly\+Data$>$ the cleaned and closed poly data if successfull 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file l\+File\+Helper.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/l\+File\+Helper.\+hpp\end{DoxyCompactItemize}

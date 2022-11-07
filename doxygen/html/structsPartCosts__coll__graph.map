@@ -1,0 +1,4 @@
+<map id="sPartCosts" name="sPartCosts">
+<area shape="rect" id="node1" title="the costs of a decomposition" alt="" coords="15,80,106,107"/>
+<area shape="rect" id="node2" href="$structsCostWeights.html" title="the weigths for the optimization" alt="" coords="5,5,116,32"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="MyClass" name="MyClass">
+<area shape="rect" id="node1" title=" " alt="" coords="899,72,976,99"/>
+<area shape="rect" id="node2" href="$structMyMiddleCost.html" title="the middle cost of a solution" alt="" coords="640,45,755,72"/>
+<area shape="rect" id="node3" href="$structsPartCosts.html" title="the costs of a decomposition" alt="" coords="326,45,417,72"/>
+<area shape="rect" id="node4" href="$structsCostWeights.html" title="the weigths for the optimization" alt="" coords="33,12,143,39"/>
+<area shape="rect" id="node5" href="$classpolyQualityMeasures_1_1MeshWithAttributes.html" title=" " alt="" coords="617,97,777,138"/>
+<area shape="rect" id="node6" title=" " alt="" coords="284,97,459,138"/>
+<area shape="rect" id="node7" href="$structpolyQualityMeasures_1_1MeshWithAttributes_1_1sGapPtsAndCost.html" title=" " alt="" coords="291,163,451,219"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,177,171,204"/>
+<area shape="rect" id="node9" href="$structMySolution.html" title="a solution set / species for the ga" alt="" coords="650,163,745,189"/>
+</map>
