@@ -12,6 +12,11 @@ slightly modified.
 
 ONLY WORKS WITH LINUX (due to the included parts of lib3mf and the cmake file).
 
+# build windows
+Similar to build in linux (see rebuildlibs.sh for more information). Works if the path to the libraries in use (vtk libs and dlls and lib3mf dll) are in PATH var of the terminal in use.
+Tested with some 3mf files, successful.
+Use obj23mf to create a 3mf file from a obj file to get a (for this) valid 3mf file.
+
 # build
 Open in VisualStudioCode with cmake extension or use cmake --build .. and cmake --install .. from the build folder.
 Use start script from /bin Folder to use from commandline (or fix the rpath using the cmake file in ./ folder).
