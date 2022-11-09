@@ -67,7 +67,7 @@ class SimpleLogger {
             n = (n < 0) ? errLogs.size()+1 : errLogs.size();
         }
         // at this point n is > 0
-        if (static_cast<uint>(n) >= errLogs.size()) {
+        if (static_cast<unsigned int>(n) >= errLogs.size()) {
             cout << "invalid error idx. idx: " << n << " number of errors is: " << errLogs.size() << endl;
             return;
         }

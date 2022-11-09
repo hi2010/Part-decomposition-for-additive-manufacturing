@@ -16,6 +16,7 @@
 #include <vector>
 #include <iostream>
 #include <type_traits>
+#include <stdio.h>
 
 #include "VHACD.h"
 #include "workflows.hpp"
@@ -27,6 +28,20 @@
  * 
  */
 class InputParser{
+#if defined _WIN64 || defined __CYGWIN__
+// _wfopen would be better bat wants a different data type
+//#define lArgParsHelperOpenFunc _wfopen
+#define lArgParsHelperOpenFunc fopen
+#elif defined _WIN32
+#define lArgParsHelperOpenFunc fopen
+#elif  defined __linux__ || defined __unix__
+#define lArgParsHelperOpenFunc fopen64
+#else
+#warning "lArgParsHelper: unknown os -> will use fopen as fopen with all its limits"
+#define lArgParsHelperOpenFunc fopen
+#endif
+
+
     public:
         InputParser (const int &argc, char **argv){
             for (int i=1; i < argc; ++i)
@@ -218,10 +233,10 @@ inline void runParsMode(const InputParser &inpPars, int argc, char* argv[]) {
     std::string inFilePat = argv[argc-2];
     std::cout << "in file path is: " << inFilePat << std::endl;
     // check validity
-    FILE* pFile = fopen64(inFilePat.c_str(), "r");
+    FILE* pFile = lArgParsHelperOpenFunc(inFilePat.c_str(), "r");
     if (pFile == NULL) {
         //throw std::runtime_error("Could not open input file");
-        std::cerr << "Could not open input file, exiting" << std::endl;
+        std::cerr << "Could not open input file, exiting, path was: " << inFilePat << std::endl;
         exit(-1);
     }
     // TODO: check if output path is possible and it should be a folder
