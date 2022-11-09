@@ -39,15 +39,18 @@ endif()
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/lib3mf/Bindings/Cpp)
 
-#if (WIN32)
-#	link_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/lib3mf/Lib)
-#	link_libraries(lib3mf)
-#else()
+if (WIN32)
+	link_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/lib3mf/Lib)
+	#link_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/lib3mf/Bin)
+	link_libraries(lib3mf)
+	link_directories(${CMAKE_CURRENT_BINARY_DIR})
+else()
 	# Unix prefixes the name of the library with "lib" anyway
-#	link_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/lib3mf/Bin)
-#	link_libraries(3mf)
-#	link_directories(${CMAKE_CURRENT_BINARY_DIR})
-#endif()
+	link_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/lib3mf/Lib)
+	link_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/lib3mf/Bin)
+	link_libraries(3mf)
+	link_directories(${CMAKE_CURRENT_BINARY_DIR})
+endif()
 
 function(CopySharedLibrary MyTarget)
 	add_custom_command(TARGET ${MyTarget} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/external/lib3mf/Bin/lib3mf.${LSUFFIX}" $<TARGET_FILE_DIR:${MyTarget}>/lib3mf${LSUFFIXOUT})
@@ -132,14 +135,23 @@ target_include_directories(${EXECUTABLE_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src ${
 #target_link_libraries(testex libvhacd)
 #find_library(testex libvhacd ${VHACD_DIR}/build)
 #target_link_libraries(testex vhacd)
-target_link_libraries(${EXECUTABLE_NAME} ${VHACD_DIR}/build/libvhacd.a)
+if (WIN32)
+	target_link_libraries(${EXECUTABLE_NAME} ${VHACD_DIR}/build/Debug/vhacd.lib)
+elseif(UNIX AND NOT APPLE)
+	target_link_libraries(${EXECUTABLE_NAME} ${VHACD_DIR}/build/libvhacd.a)
+endif()
+#target_link_libraries(${EXECUTABLE_NAME} ${VHACD_DIR}/build/libvhacd.a)
 #target_link_libraries(${EXECUTABLE_NAME} 3mf)
 
 list(APPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/external/lib3mf/Bin)
 list(APPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_BINARY_DIR})
-find_library(3MFLIB 3mf)
+# !__!_!__!_!_!_!_!_!_!_!_!______--------------------------------------------
+# check if needed in lnx or at all
+#find_library(3MFLIB 3mf)
 #message("lib3mf: ${3MFLIB}")
-target_link_libraries(${EXECUTABLE_NAME} ${3MFLIB})
+# check if needed in lnx or at all
+# !__!_!__!_!_!_!_!_!_!_!_!______--------------------------------------------
+#target_link_libraries(${EXECUTABLE_NAME} ${3MFLIB})
 #target_link_libraries(${EXECUTABLE_NAME} ${CMAKE_CURRENT_BINARY_DIR}/lib3mf.so.2)
 
 #add_library(libvhacd STATIC IMPORTED) # or STATIC instead of SHARED

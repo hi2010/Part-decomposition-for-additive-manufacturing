@@ -19,6 +19,7 @@
 #include <vtkDataArrayAccessor.h>
 #include <vtkType.h>
 #include <vtkAssume.h>
+#include <vtkBoundingBox.h>
 
 #include "lVtkHelper.hpp"
 #include "arrayMath.hpp"

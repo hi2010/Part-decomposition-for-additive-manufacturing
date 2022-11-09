@@ -14,10 +14,13 @@
 
 #include <vector>
 #include <set>
+// needed for windows to use constants
+#define _USE_MATH_DEFINES
 #include <math.h>
 #include <thread>
 // for timing tests
 #include <chrono>
+#include <limits>
 
 #include <vtkSmartPointer.h>
 #include <vtkPolyData.h>
@@ -577,7 +580,8 @@ namespace polyQualityMeasures
         bool planesEqual(const vtkSmartPointer<vtkPlane> &x,
                          const vtkSmartPointer<vtkPlane> &y) const
         {
-            auto errorMargin = std::numeric_limits<double>::min() * 10;
+            // "()" avoid macro expansion on windows which causes failed compilation
+            auto errorMargin = (std::numeric_limits<double>::min)() * 10;
             // auto errorMargin = 1;
             //  point on plane
             auto px = x->GetOrigin();
@@ -709,7 +713,7 @@ namespace polyQualityMeasures
          */
         bool createLinksIfNeeded(bool force = false)
         {
-            if (!this->linksCreated or force)
+            if (!this->linksCreated || force)
             {
                 this->mesh->BuildLinks();
                 this->linksCreated = true;
@@ -776,16 +780,16 @@ namespace polyQualityMeasures
             pd.Normalize();
             // relative to the xAxis (around z) (math. positive in relation to the x axis)
             double xAngle;
-            if (pd.GetY() > (1 - std::numeric_limits<double>::min() * 100) && fabs(pd.GetX()) < (std::numeric_limits<double>::min() * 100))
+            if (pd.GetY() > (1 - (std::numeric_limits<double>::min)() * 100) && fabs(pd.GetX()) < ((std::numeric_limits<double>::min)() * 100))
             {
                 // only y no x case
                 // degree use only positive anlges -> -90 = 270°
                 xAngle = 90 * (pd.GetY() > 0 ? 1 : 3);
             }
-            else if (pd.GetY() < (1 - std::numeric_limits<double>::min() * 100))
+            else if (pd.GetY() < (1 - (std::numeric_limits<double>::min)() * 100))
             {
                 // no y case check if no x also
-                xAngle = (fabs(pd.GetX()) < (std::numeric_limits<double>::min() * 100)) ? 0. : 90.;
+                xAngle = (fabs(pd.GetX()) < ((std::numeric_limits<double>::min)() * 100)) ? 0. : 90.;
             }
             else
             {

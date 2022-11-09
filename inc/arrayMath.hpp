@@ -16,6 +16,7 @@
 #include <iostream>
 #include <memory>
 #include <string>
+#include <sstream>
 
 /*
 // subtract array b from array a and return result

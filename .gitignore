@@ -11,6 +11,10 @@ bin/lib/*
 !/build/lib3mf.so*
 !/build/decomposer
 
+out/*
+.vs/*
+.vscode/*
+
 # gitignore cmake
 # https://github.com/github/gitignore/blob/main/CMake.gitignore
 CMakeLists.txt.user

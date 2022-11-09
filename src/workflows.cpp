@@ -194,7 +194,7 @@ public:
     double minChVol = -1;
     double maxChs = -1;
     // approximately the current population num in the generation (gets set to 0 on report generation and ++ on eval)
-    uint curPopul = 0;
+    unsigned int curPopul = 0;
 
     /**
      * @brief Construct a new My Class object
@@ -443,7 +443,7 @@ VHACD::IVHACD::Parameters optimizeGA(MeshWithAttributes meshwa)
     ga_obj.best_stall_max = 10;
     // 20 % elite, if that is 0 but there are more than one species use 1
     // this is needed to avoid segfs from the ga "lib"
-    uint eliteCount = ga_obj.population * .2;
+    unsigned int eliteCount = ga_obj.population * .2;
     eliteCount = (eliteCount == 0 && ga_obj.population > 1) ? 1 : eliteCount;
     ga_obj.elite_count = eliteCount;
     ga_obj.crossover_fraction = 0.7;
@@ -528,7 +528,7 @@ VHACD::IVHACD::Parameters optimizeGA(polyQualityMeasures::MeshWithAttributes mes
     ga_obj.best_stall_max = 10;
     // 20 % elite, if that is 0 but there are more than one species use 1
     // this is needed to avoid segfs from the ga "lib"
-    uint eliteCount = ga_obj.population * .2;
+    unsigned int eliteCount = ga_obj.population * .2;
     eliteCount = (eliteCount == 0 && ga_obj.population > 1) ? 1 : eliteCount;
     ga_obj.elite_count = eliteCount;
     ga_obj.crossover_fraction = 0.7;
