@@ -10,7 +10,6 @@ Uses the decomposition process from:
 [Part decomposition and evaluation based on standard design guidelines for additive manufacturability and assemblability] (https://doi.org/10.1016/j.addma.2020.101702)
 slightly modified.
 
-ONLY WORKS WITH LINUX (due to the included parts of lib3mf and the cmake file).
 
 # build
 Open in VisualStudioCode with cmake extension or use cmake --build .. and cmake --install .. from the build folder.
