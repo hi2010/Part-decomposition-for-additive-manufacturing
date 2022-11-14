@@ -1,6 +1,7 @@
 old/
 external/vtk_old_build/
 external/vtk/*
+external/vtk
 external/VHACD_Performance/VHACD_Lib/build/*
 *.cmake
 build/*
