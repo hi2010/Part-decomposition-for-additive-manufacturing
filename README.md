@@ -121,6 +121,16 @@ Parameter description:
 If costs for per part budget and decomposition cost calculation should be adjusted: \
 Adjust the values in DecompositionService at the beginning or any of the formulas.
 
+## How to compress the build to keep symlinks on linux:
+```bash
+zip -r --symlinks bin.zip bin
+```
+With bin beeing the folder containing the code.
+Use
+```bash
+unzip bin.zip
+```
+to unzip and restore the symlinks.
 
 # used libraries:
 * [vtk](https://vtk.org/)
