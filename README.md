@@ -1,3 +1,5 @@
+# Part decomposition for additive manufacturing
+
 This program uses a genetic algorithm to optimize a decomposition of a 3d model with 3mf format.
 If your file is not in the 3mf format, you can convert it to obj format and use obj23mf.
 The provided cmd-line interface can be seen by running the program without argument or with -h.
