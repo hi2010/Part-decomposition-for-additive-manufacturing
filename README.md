@@ -1,4 +1,4 @@
-# Part decomposition for additive manufacturing, 3d printing
+# 3D-Mesh / Part decomposition for additive manufacturing, 3d printing
 
 This program uses a genetic algorithm to optimize a decomposition of a 3d model with 3mf format.
 If your file is not in the 3mf format, you can convert it to obj format and use obj23mf.
