@@ -81,7 +81,8 @@ class InputParser{
  * TODO: add license printout
  */
 inline void parsPrintHelp() {
-    std::cout << "usage: [options] inputFile.3mf outputFile.3mf \n" \
+    std::cout << "usage: [options] inputFile.3mf outputFilePath\fileStemName \n" \
+    << "file stem name is any name like myResult which will get result specific naming appended e.g: myResult -> myResultoriresult.3mf" \
     << "style: --option {value}\n" \
     << "decompose part options are: \n" \
     << "--n_population --n_generations \n" \
@@ -143,7 +144,7 @@ inline GA_Type parseGASettings(InputParser inpPars) {
 
     gares.population = inpPars.parsType("--n_population", 20u);
     //
-    gares.generation_max = inpPars.parsType("--n_generation", 1000);
+    gares.generation_max = inpPars.parsType("--n_generations", 1000);
     //
     return gares;
 }
