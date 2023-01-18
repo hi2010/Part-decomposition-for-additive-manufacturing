@@ -12,6 +12,12 @@ Uses the decomposition process from:
 [Part decomposition and evaluation based on standard design guidelines for additive manufacturability and assemblability] (https://doi.org/10.1016/j.addma.2020.101702)
 slightly modified.
 
+# example:
+(windows)
+''' bash
+.\run.bat --n_generation 2 --n_population 4 --printer_dimensions 10,10,10 "C:\path2myfile\obj23mftestobj.3mf" "C:\path2myFile\myResults_"
+'''
+obj23mftestobj.3mf: any file in valid 3mf format that can be processed. You may use an obj file and convert it using obj23mf (see other repo).
 
 # build
 Open in VisualStudioCode with cmake extension or use cmake --build .. and cmake --install .. from the build folder.
