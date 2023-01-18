@@ -14,9 +14,9 @@ slightly modified.
 
 # example:
 (windows)
-''' bash
+``` bash
 .\run.bat --n_generation 2 --n_population 4 --printer_dimensions 10,10,10 "C:\path2myfile\obj23mftestobj.3mf" "C:\path2myFile\myResults_"
-'''
+```
 obj23mftestobj.3mf: any file in valid 3mf format that can be processed. You may use an obj file and convert it using obj23mf (see other repo).
 
 # build
