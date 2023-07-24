@@ -307,9 +307,15 @@ public:
         auto createNewRandInRange = [=]()
         {
             auto newRand = 0.;
+            int maxLoopCount = 10;
             do
             {
                 newRand = createNewRand();
+                maxLoopCount --;
+                // avoid infinte loop
+                if (maxLoopCount == 0) {
+                    newRand = abs(1/newRand) * upperLim;
+                }
             } while (outOfRange(newRand));
             return newRand;
         };
